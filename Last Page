@@ -1,0 +1,75 @@
+Last page:  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html">History of the Web</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="history.html">Timeline</a>
+        <a href="web-works.html">How It Works</a>
+        <a href="report.html">Report</a>
+      </div>
+    </nav>
+    <h1>Implementation report</h1>
+    <p>This page explains how the website was planned, structured and styled.</p>
+  </header>
+
+  <main class="container">
+    <section class="simple-section">
+      <h2>Structure choice</h2>
+      <p>
+     We did not use a pre-made template for this website. Instead, we created a simple custom static website using only HTML and CSS. This choice helped us better understand how a website is structured and gave us direct control over the pages, navigation, layout, colors and fonts.
+      </p>
+    </section>
+
+    <section class="simple-section">
+      <h2>Information architecture</h2>
+      <p>
+        The menu has four pages. The Home page introduces the topic. The Timeline page explains the historical
+        development of the Web. The How It Works page explains the technical process behind opening a website.
+        The Report page documents our design and implementation choices. This order moves from general context
+        to technical explanation and then to reflection on our own work.
+      </p>
+    </section>
+
+    <section class="simple-section">
+      <h2>Stylistic choices</h2>
+      <p>
+        We used nude and neutral colors because the topic is historical and educational. The soft background makes
+        the website calm and readable. The rounded cards and simple typography create a modern but minimal style.
+        In CSS, we changed properties such as background-color, color, font-family, padding, margin, border-radius
+        and box-shadow.
+      </p>
+    </section>
+
+    <section class="simple-section">
+      <h2>HTML and CSS logic</h2>
+      <p>
+        The HTML structure uses semantic tags. The &lt;header&gt; contains the title and navigation. The &lt;main&gt;
+        contains the central content. The &lt;section&gt; elements divide the page into logical blocks. The &lt;footer&gt;
+        gives project information. The external CSS file, styles.css, is connected to all pages with the &lt;link&gt;
+        tag, so the design remains consistent across the whole site.
+      </p>
+    </section>
+
+    <section class="simple-section">
+      <h2>Challenges</h2>
+      <p>
+        1. Learning and understanding the role of each CSS element used in the website. Since we did not use a pre-made template, we had to understand how every CSS property affected the final visual result, such as colors, spacing, margins, padding, borders, font size, layout, and responsive design.
+        2. Creating a navigation system that was clear but not too complex. 3. Making the design work well on smaller screens, such as phones or tablets.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Pariya Nouri — Sogol Kasaei — Asad Ur Rab Jaffry</p>
+  </footer>
+</body>
+</html>
