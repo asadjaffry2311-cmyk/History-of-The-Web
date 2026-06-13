@@ -360,10 +360,11 @@ strong { color: var(--c-text); font-weight: 600; }
 /* ---------- Prose + Pull Quote ---------- */
 .prose-columns {
   display: grid;
-  grid-template-columns: 1fr 320px;
+  grid-template-columns: 1fr 300px;
   gap: 50px;
   align-items: start;
   margin-top: 10px;
+  overflow: hidden;
 }
 
 .prose-body p { font-size: 16.5px; line-height: 1.8; max-width: none; }
@@ -838,6 +839,8 @@ td a { font-weight: 600; }
   display: flex;
   flex-direction: column;
   gap: 22px;
+  align-self: start;
+  min-width: 0;
 }
 
 .pull-quote {
@@ -1213,7 +1216,7 @@ td a { font-weight: 600; }
 @media (max-width: 900px) {
   .did-you-know { flex-direction: column; gap: 8px; }
   .dyk-label { align-self: flex-start; }
-  .sidebar-right { position: static; }
+  .sidebar-right { align-self: start; }
   .about-strip-inner { flex-direction: column; gap: 16px; }
   .about-sep { width: 60px; height: 1px; }
   .tp-event { display: none; }
