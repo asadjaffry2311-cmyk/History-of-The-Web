@@ -452,6 +452,204 @@
       </div>
     </section>
 
+    <!-- SECTION: Static vs Dynamic -->
+    <section class="ww-section reveal" aria-labelledby="static-heading">
+      <div class="section-label">Website Types</div>
+      <h2 id="static-heading" class="section-heading">Static vs Dynamic Websites</h2>
+      <p class="section-intro">
+        Not all websites work the same way on the server side. According to
+        <a href="https://elementor.com/blog/what-is-a-web-server/" target="_blank" rel="noopener noreferrer">Elementor</a>,
+        the key distinction is whether the server sends pre-built files or generates
+        a unique page for each request.
+      </p>
+      <div class="ww-two-col">
+        <div class="ww-lang-card">
+          <div class="ww-lang-badge" style="background:#edfaf1; color:#1a7a45; border-color:#b2dfca">
+            <span>Static</span>
+          </div>
+          <h3>Static Websites</h3>
+          <p>
+            A static website consists of fixed
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>,
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>,
+            and JavaScript files stored on the server. When a user requests a page,
+            the server simply sends those exact files — no processing, no database.
+            Every user who visits the same URL receives the same files.
+          </p>
+          <p>
+            <strong>This website is a static site</strong>, hosted on
+            <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+            The HTML and CSS files are stored in a GitHub repository and served
+            directly when visitors request them. Static sites are fast, secure,
+            and free to host on GitHub Pages.
+          </p>
+          <div class="vtl-tag-row" style="margin-top:14px; padding-top:12px">
+            <span class="vtl-tag">Fast</span>
+            <span class="vtl-tag">Simple</span>
+            <span class="vtl-tag">GitHub Pages</span>
+            <span class="vtl-tag">No database</span>
+          </div>
+        </div>
+        <div class="ww-lang-card">
+          <div class="ww-lang-badge" style="background:#f5f0ff; color:#6a3db5; border-color:#c8b8f0">
+            <span>Dynamic</span>
+          </div>
+          <h3>Dynamic Websites</h3>
+          <p>
+            A dynamic website generates a unique page for each user request.
+            When you log into Facebook or search on Google, the server runs code
+            (in languages like Python, PHP, or JavaScript) and queries a database
+            to build a personalised page on the fly.
+          </p>
+          <p>
+            Dynamic sites can show different content to different users, handle
+            logins, process forms, and update in real time. The trade-off is
+            greater complexity — they require a server capable of running code,
+            a database, and more careful security. According to
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN</a>,
+            most large websites today are dynamic.
+          </p>
+          <div class="vtl-tag-row" style="margin-top:14px; padding-top:12px">
+            <span class="vtl-tag">Personalised</span>
+            <span class="vtl-tag">Database-driven</span>
+            <span class="vtl-tag">Login support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: HTTPS -->
+    <section class="ww-section reveal" aria-labelledby="https-heading">
+      <div class="section-label">Security</div>
+      <h2 id="https-heading" class="section-heading">HTTP vs HTTPS — Security on the Web</h2>
+      <p class="section-intro">
+        You may have noticed that most URLs today begin with <code>https://</code>
+        rather than <code>http://</code>. The "S" stands for <strong>Secure</strong>
+        — and it makes an important difference.
+      </p>
+      <div class="ww-https-grid">
+        <div class="ww-https-card ww-https-card--danger">
+          <div class="ww-https-header">
+            <span class="ww-https-badge">HTTP</span>
+            <span class="ww-https-label">⚠ Not Secure</span>
+          </div>
+          <p>
+            Plain <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — data is sent in plain text, readable by anyone intercepting the connection">HTTP</a>
+            sends data as plain text across the network. Anyone positioned between
+            your browser and the server — on the same Wi-Fi network, for example —
+            could potentially read or alter the data being transmitted.
+          </p>
+        </div>
+        <div class="ww-https-card ww-https-card--safe">
+          <div class="ww-https-header">
+            <span class="ww-https-badge ww-https-badge--safe">HTTPS</span>
+            <span class="ww-https-label">✓ Secure</span>
+          </div>
+          <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTPS" target="_blank" rel="noopener noreferrer">HTTPS</a>
+            adds a layer of encryption using
+            <a href="https://www.cloudflare.com/learning/ssl/what-is-ssl/" target="_blank" rel="noopener noreferrer">SSL/TLS</a>
+            (Secure Sockets Layer / Transport Layer Security). All data exchanged
+            between the browser and server is encrypted — unreadable to anyone
+            who intercepts it. According to
+            <a href="https://transparencyreport.google.com/https/overview" target="_blank" rel="noopener noreferrer">Google's Transparency Report</a>,
+            over 95% of web traffic is now encrypted with HTTPS.
+          </p>
+        </div>
+      </div>
+      <div class="callout-box" style="margin-top:20px">
+        <span class="callout-icon" aria-hidden="true">🔒</span>
+        <div>
+          <strong>How to check:</strong>
+          <p>Look for the padlock icon 🔒 in your browser's address bar. If it is
+          present, the connection is encrypted with HTTPS. You should never enter
+          passwords or personal information on a site that shows HTTP only.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: The DOM -->
+    <section class="ww-section reveal" aria-labelledby="dom-heading">
+      <div class="section-label">Rendering</div>
+      <h2 id="dom-heading" class="section-heading">How the Browser Renders a Page — The DOM</h2>
+      <p class="section-intro">
+        When a browser receives an HTML file, it does not simply display the text.
+        It builds an internal structure called the
+        <strong>DOM</strong> (Document Object Model) — a tree of every element on
+        the page. According to
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction" target="_blank" rel="noopener noreferrer">MDN</a>,
+        the DOM is the browser's live representation of the page, which can be
+        inspected and modified at any time.
+      </p>
+      <div class="ww-dom-layout">
+        <div class="ww-dom-text">
+          <p>
+            The browser reads the HTML from top to bottom and builds the DOM tree.
+            Each HTML tag becomes a <strong>node</strong> in the tree. Parent elements
+            contain child elements, just like folders contain files. For example, a
+            <code>&lt;section&gt;</code> element might contain an
+            <code>&lt;h2&gt;</code> and several <code>&lt;p&gt;</code> elements as
+            its children.
+          </p>
+          <p>
+            Once the DOM is built, the browser applies
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>
+            rules to calculate how each element should look — its size, colour,
+            position, and spacing. This produces the final visual layout you see
+            on screen. The entire process — from receiving the HTML to displaying
+            the page — is called <strong>rendering</strong>.
+          </p>
+          <p>
+            The DOM is also the reason websites can update without a full page
+            reload. JavaScript can change DOM nodes — adding, removing, or modifying
+            elements — and the browser re-renders only the parts that changed.
+            This is how social media feeds update instantly when you scroll.
+          </p>
+        </div>
+        <div class="ww-dom-tree" aria-label="Visual diagram of a DOM tree structure">
+          <div class="ww-dom-node ww-dom-root">
+            <span>document</span>
+          </div>
+          <div class="ww-dom-branch">
+            <div class="ww-dom-connector"></div>
+            <div class="ww-dom-node ww-dom-level1">
+              <span>&lt;html&gt;</span>
+            </div>
+            <div class="ww-dom-children">
+              <div class="ww-dom-child-group">
+                <div class="ww-dom-connector"></div>
+                <div class="ww-dom-node ww-dom-level2">
+                  <span>&lt;head&gt;</span>
+                </div>
+                <div class="ww-dom-leaf">
+                  <div class="ww-dom-connector"></div>
+                  <div class="ww-dom-node ww-dom-level3"><span>&lt;title&gt;</span></div>
+                </div>
+              </div>
+              <div class="ww-dom-child-group">
+                <div class="ww-dom-connector"></div>
+                <div class="ww-dom-node ww-dom-level2">
+                  <span>&lt;body&gt;</span>
+                </div>
+                <div class="ww-dom-leaf">
+                  <div class="ww-dom-connector"></div>
+                  <div class="ww-dom-node ww-dom-level3"><span>&lt;nav&gt;</span></div>
+                </div>
+                <div class="ww-dom-leaf">
+                  <div class="ww-dom-connector"></div>
+                  <div class="ww-dom-node ww-dom-level3"><span>&lt;section&gt;</span></div>
+                </div>
+                <div class="ww-dom-leaf">
+                  <div class="ww-dom-connector"></div>
+                  <div class="ww-dom-node ww-dom-level3"><span>&lt;footer&gt;</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- QUICK REFERENCE TABLE -->
     <section class="table-section reveal" aria-labelledby="ref-table-heading">
       <h2 id="ref-table-heading">Quick Reference — Key Terms</h2>
