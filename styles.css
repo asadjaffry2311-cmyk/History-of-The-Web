@@ -1475,3 +1475,42 @@ td a { font-weight: 600; }
   .vtl-card { padding: 20px 18px; }
   .vtl-card:hover { transform: none; }
 }
+
+/* Semiotic reflection callout — history.html only */
+.semiotic-callout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #eef4fb 0%, var(--c-surface) 100%);
+  border: 1px solid #c0d6ee;
+  border-left: 4px solid var(--c-navy);
+  border-radius: var(--radius-lg);
+  padding: 32px 34px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sc-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sc-body h2 {
+  font-size: clamp(18px, 2.2vw, 22px);
+  color: var(--c-navy);
+  margin-bottom: 14px;
+}
+
+.sc-body p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--c-text-mid);
+  margin-bottom: 12px;
+}
+
+.sc-body p:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .semiotic-callout { flex-direction: column; gap: 14px; padding: 22px 18px; }
+}
