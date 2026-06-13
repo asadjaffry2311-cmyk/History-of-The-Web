@@ -72,10 +72,10 @@ strong { color: var(--c-text); font-weight: 600; }
 .topbar {
   background: var(--c-navy);
   color: #a0b4c8;
-  font-size: 12px;
+  font-size: 13px;
   font-family: var(--font-sans);
-  letter-spacing: 0.4px;
-  padding: 8px var(--pad-x);
+  letter-spacing: 0.3px;
+  padding: 10px var(--pad-x);
   text-align: right;
 }
 
