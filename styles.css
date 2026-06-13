@@ -369,33 +369,7 @@ strong { color: var(--c-text); font-weight: 600; }
 
 .prose-body p { font-size: 16.5px; line-height: 1.8; max-width: none; }
 
-.pull-quote {
-  background: var(--c-accent-bg);
-  border-left: 4px solid var(--c-blue);
-  border-radius: var(--radius-lg);
-  padding: 28px 26px;
-  position: sticky;
-  top: 90px;
-}
 
-.pull-quote blockquote {
-  font-family: var(--font-serif);
-  font-size: 17px;
-  font-style: italic;
-  color: var(--c-navy);
-  line-height: 1.65;
-  margin-bottom: 16px;
-}
-
-.pull-quote blockquote::before { content: '\201C'; }
-.pull-quote blockquote::after  { content: '\201D'; }
-
-.pull-quote cite {
-  font-size: 13px;
-  color: var(--c-text-soft);
-  font-style: normal;
-}
-.pull-quote cite a { font-size: 13px; }
 
 /* ---------- Table ---------- */
 .table-wrap {
@@ -732,7 +706,6 @@ td a { font-weight: 600; }
 @media (max-width: 900px) {
   .card-row { grid-template-columns: 1fr; }
   .prose-columns { grid-template-columns: 1fr; gap: 30px; }
-  .pull-quote { position: static; }
   .stat-strip-inner { flex-direction: column; }
   .stat-sep { width: 60px; height: 1px; }
   .stat-item { padding: 20px; }
@@ -839,12 +812,11 @@ td a { font-weight: 600; }
   display: flex;
   flex-direction: column;
   gap: 0;
-  align-self: start;
+  align-self: stretch;
   min-width: 0;
-  position: relative;
 }
 
-/* Quote sits on top — scrolls normally, covers the image as you scroll */
+/* Quote scrolls normally — sits above image, higher z-index covers it */
 .pull-quote {
   position: relative;
   z-index: 2;
@@ -855,7 +827,7 @@ td a { font-weight: 600; }
   margin-bottom: 0;
 }
 
-/* Image sticks at top — stays put while quote scrolls over it */
+/* Image is sticky ONLY within .sidebar-right — stops when sidebar ends */
 .side-figure {
   position: sticky;
   top: 80px;
@@ -866,14 +838,7 @@ td a { font-weight: 600; }
   box-shadow: var(--shadow-md);
 }
 
-.pull-quote {
-  position: relative;
-  z-index: 2;
-  background: var(--c-accent-bg);
-  border-left: 4px solid var(--c-blue);
-  border-radius: var(--radius-lg);
-  padding: 24px 22px;
-}
+
 
 .pull-quote p {
   font-family: var(--font-serif);
@@ -895,12 +860,6 @@ td a { font-weight: 600; }
 .pull-quote cite a { font-size: 13px; }
 
 /* ---------- Side Figure (image in sidebar) ---------- */
-.side-figure {
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  border: 1px solid var(--c-border);
-  box-shadow: var(--shadow-md);
-}
 
 .side-figure img {
   width: 100%;
@@ -1242,7 +1201,7 @@ td a { font-weight: 600; }
   .did-you-know { flex-direction: column; gap: 8px; }
   .dyk-label { align-self: flex-start; }
   .sidebar-right { align-self: start; }
-  .side-figure { position: static; top: auto; }
+  .side-figure { position: static !important; top: auto !important; }
   .about-strip-inner { flex-direction: column; gap: 16px; }
   .about-sep { width: 60px; height: 1px; }
   .tp-event { display: none; }
