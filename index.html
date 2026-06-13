@@ -84,7 +84,7 @@
   <main class="page-wrap">
 
     <!-- ── DID YOU KNOW BANNER — placed first so it grabs attention immediately ── -->
-    <div class="did-you-know" role="note">
+    <div class="did-you-know reveal" role="note">
       <span class="dyk-label">Did you know?</span>
       <span class="dyk-text">
         The world's first website is still online today — you can visit it at
@@ -98,7 +98,7 @@
     </div>
 
     <!-- ── SECTION: Three Lenses ── -->
-    <section class="section" aria-labelledby="covers-heading">
+    <section class="section reveal" aria-labelledby="covers-heading">
       <div class="section-label">What This Site Covers</div>
       <h2 id="covers-heading" class="section-heading">Three Lenses on the Web</h2>
       <p class="section-intro">
@@ -161,7 +161,7 @@
     <hr class="divider">
 
     <!-- ── SECTION: Why This Topic Matters ── -->
-    <section class="section" aria-labelledby="why-heading">
+    <section class="section reveal" aria-labelledby="why-heading">
       <div class="section-label">Context</div>
       <h2 id="why-heading" class="section-heading">Why This Topic Matters</h2>
 
@@ -256,7 +256,7 @@
     </section>
 
     <!-- ── VISUAL TIMELINE PREVIEW ── -->
-    <div class="timeline-preview" aria-label="Brief timeline preview">
+    <div class="timeline-preview reveal" aria-label="Brief timeline preview">
       <div class="tp-header">
         <span class="section-label" style="margin:0">Key Milestones</span>
         <a href="history.html" class="tp-see-all">See full timeline →</a>
@@ -296,7 +296,7 @@
     <hr class="divider">
 
     <!-- ── SECTION: Key Concepts ── -->
-    <section class="section" aria-labelledby="concepts-heading">
+    <section class="section reveal" aria-labelledby="concepts-heading">
       <div class="section-label">Reference</div>
       <h2 id="concepts-heading" class="section-heading">Key Concepts at a Glance</h2>
       <p class="section-intro">
@@ -373,7 +373,7 @@
     <hr class="divider">
 
     <!-- ── SECTION: Navigate this site ── -->
-    <section class="section" aria-labelledby="nav-heading">
+    <section class="section reveal" aria-labelledby="nav-heading">
       <div class="section-label">Navigation</div>
       <h2 id="nav-heading" class="section-heading">How to Navigate This Site</h2>
       <div class="nav-cards">
@@ -405,7 +405,7 @@
     </section>
 
     <!-- ── REFERENCES ── -->
-    <section class="references-section" id="references" aria-labelledby="refs-heading">
+    <section class="references-section reveal" id="references" aria-labelledby="refs-heading">
       <div class="refs-header">
         <h2 id="refs-heading">References &amp; Further Reading</h2>
         <a href="#top" class="back-to-top" aria-label="Back to top of page">↑ Back to top</a>
@@ -491,6 +491,20 @@
       <span class="footer-updated">Last updated: June 2026</span>
     </div>
   </footer>
+
+  <!-- SCROLL REVEAL -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
 
 </body>
 </html>
