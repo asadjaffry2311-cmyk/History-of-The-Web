@@ -3,74 +3,660 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Report</title>
+  <title>Report — History of the Web</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
-    <nav class="navbar">
-      <a class="logo" href="index.html">History of the Web</a>
-      <div class="nav-links">
+
+  <!-- TOP BAR -->
+  <div id="top" class="topbar">
+    <span>
+      <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a>
+      · <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Università di Bologna</a>
+      · CHS Project
+    </span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">History of the Web</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="history.html">Timeline</a>
+      <a href="web-works.html">How It Works</a>
+      <a href="report.html" class="nav-active" aria-current="page">Report</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Implementation Report</div>
+      <h1>How This Website Was Built</h1>
+      <p class="lead">
+        This page documents the planning, design, and technical decisions behind
+        this website — from the choice to build without a template to the
+        CSS properties used to create a consistent visual identity. It serves
+        as our technical exam report.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- PROJECT OVERVIEW STRIP -->
+    <div class="rp-overview reveal">
+      <div class="rp-overview-item">
+        <span class="rp-overview-label">Project Type</span>
+        <span class="rp-overview-value">Static Website</span>
+      </div>
+      <div class="rp-overview-sep"></div>
+      <div class="rp-overview-item">
+        <span class="rp-overview-label">Technologies</span>
+        <span class="rp-overview-value">HTML · CSS · JavaScript</span>
+      </div>
+      <div class="rp-overview-sep"></div>
+      <div class="rp-overview-item">
+        <span class="rp-overview-label">Hosting</span>
+        <span class="rp-overview-value">GitHub Pages</span>
+      </div>
+      <div class="rp-overview-sep"></div>
+      <div class="rp-overview-item">
+        <span class="rp-overview-label">Pages</span>
+        <span class="rp-overview-value">4 (Home · Timeline · How It Works · Report)</span>
+      </div>
+      <div class="rp-overview-sep"></div>
+      <div class="rp-overview-item">
+        <span class="rp-overview-label">Live URL</span>
+        <span class="rp-overview-value">
+          <a href="https://asadjaffry2311-cmyk.github.io/History-of-The-Web/" target="_blank" rel="noopener noreferrer">asadjaffry2311-cmyk.github.io</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- SECTION 1: Template Selection -->
+    <section class="rp-section reveal" aria-labelledby="template-heading">
+      <div class="rp-section-num">01</div>
+      <div class="rp-section-body">
+        <div class="section-label">Template Selection</div>
+        <h2 id="template-heading" class="section-heading">Why We Built Without a Template</h2>
+        <p>
+          We deliberately chose <strong>not to use a pre-made template</strong> for
+          this website. Instead, we built the entire site from scratch using only
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>
+          and
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>,
+          hosted via
+          <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+          This decision was guided by three reasons:
+        </p>
+        <ul class="rp-list">
+          <li>
+            <strong>Academic understanding.</strong> Building without a template
+            required us to understand every element we used — every tag, every
+            CSS property, every layout decision. We could not rely on pre-written
+            code we did not fully understand.
+          </li>
+          <li>
+            <strong>Full control.</strong> A custom build gave us direct control
+            over the page structure, navigation, colour palette, typography, and
+            responsive behaviour — all of which needed to reflect the educational
+            purpose of the site.
+          </li>
+          <li>
+            <strong>Alignment with course goals.</strong> The course asked us to
+            apply theoretical knowledge of web technologies to a practical
+            environment. Building from scratch is a more direct demonstration of
+            that knowledge than modifying an existing template.
+          </li>
+        </ul>
+        <p>
+          The site was built as a
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Static_web_page" target="_blank" rel="noopener noreferrer" data-tip="A static website consists of fixed HTML and CSS files — no server-side processing or database required">static website</a>
+          — meaning all pages are pre-built HTML and CSS files, served directly
+          by GitHub Pages without any server-side processing. This is both
+          appropriate for the project's scope and a direct demonstration of the
+          concepts discussed on the
+          <a href="web-works.html">How It Works</a> page.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Information Architecture -->
+    <section class="rp-section reveal" aria-labelledby="ia-heading">
+      <div class="rp-section-num">02</div>
+      <div class="rp-section-body">
+        <div class="section-label">Information Architecture</div>
+        <h2 id="ia-heading" class="section-heading">How We Organised the Site</h2>
+        <p>
+          The site is organised into four pages, arranged in a deliberate
+          progression — from broad context to technical explanation to critical
+          reflection. Each page builds on the previous one:
+        </p>
+
+        <div class="rp-ia-grid">
+          <a class="rp-ia-card" href="index.html">
+            <span class="rp-ia-num">01</span>
+            <div>
+              <strong>Home</strong>
+              <p>Introduces the topic, its historical and semiotic relevance, and
+              provides a glossary of key terms. Acts as the entry point and
+              orientation for all other pages.</p>
+            </div>
+          </a>
+          <a class="rp-ia-card" href="history.html">
+            <span class="rp-ia-num">02</span>
+            <div>
+              <strong>Timeline</strong>
+              <p>Traces the chronological development of the Web from ARPANET
+              (1969) to the social and mobile Web of today, with sourced facts,
+              images, a comparison table, and a glossary.</p>
+            </div>
+          </a>
+          <a class="rp-ia-card" href="web-works.html">
+            <span class="rp-ia-num">03</span>
+            <div>
+              <strong>How It Works</strong>
+              <p>Explains the technical process behind opening a website: DNS,
+              TCP/IP, HTTP requests and responses, HTML rendering, the DOM, and
+              the difference between static and dynamic sites.</p>
+            </div>
+          </a>
+          <a class="rp-ia-card rp-ia-card--active" href="report.html">
+            <span class="rp-ia-num">04</span>
+            <div>
+              <strong>Report (this page)</strong>
+              <p>Documents the design decisions, HTML structure, CSS choices,
+              and challenges encountered during development. Serves as the
+              technical exam report.</p>
+            </div>
+          </a>
+        </div>
+
+        <p>
+          Navigation is handled by a sticky top bar present on all four pages.
+          The active page is always highlighted in blue so the user always knows
+          where they are. Each page also links to the others through contextual
+          inline links within the text, creating a network of connections — a
+          structure that itself mirrors the
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer" data-tip="A clickable reference connecting one document to another — the fundamental structure of the Web">hyperlink</a>
+          logic of the Web.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Stylistic Choices -->
+    <section class="rp-section reveal" aria-labelledby="style-heading">
+      <div class="rp-section-num">03</div>
+      <div class="rp-section-body">
+        <div class="section-label">Stylistic Choices</div>
+        <h2 id="style-heading" class="section-heading">Design Decisions and Their Rationale</h2>
+        <p>
+          Every visual decision was made deliberately to support the educational
+          purpose of the site. We were inspired by the design language of
+          <a href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer">CERN's website</a>
+          — authoritative, clean, and content-first.
+        </p>
+
+        <!-- Colour palette -->
+        <h3 class="rp-sub-heading">Colour Palette</h3>
+        <p>
+          The site uses a <strong>dark navy and white</strong> palette for the
+          navigation, headers, and footer — conveying authority and seriousness.
+          The body uses a warm off-white background
+          (<code>#f5f4f0</code>) rather than pure white, which reduces eye strain
+          on long reads. The accent colour is a mid-blue (<code>#0057a8</code>),
+          used consistently for links, active states, card borders, and
+          interactive elements. All colours are defined as
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer" data-tip="CSS custom properties allow you to define reusable values (variables) throughout a stylesheet">CSS custom properties</a>
+          (variables) in the <code>:root</code> selector, making them easy to
+          change consistently across the entire site.
+        </p>
+
+        <!-- Colour swatches -->
+        <div class="rp-swatches">
+          <div class="rp-swatch">
+            <div class="rp-swatch-colour" style="background:#0e1a2b"></div>
+            <span class="rp-swatch-name">Navy</span>
+            <span class="rp-swatch-hex">#0e1a2b</span>
+            <span class="rp-swatch-use">Header · Footer · Nav</span>
+          </div>
+          <div class="rp-swatch">
+            <div class="rp-swatch-colour" style="background:#0057a8"></div>
+            <span class="rp-swatch-name">Blue</span>
+            <span class="rp-swatch-hex">#0057a8</span>
+            <span class="rp-swatch-use">Links · Accents · Active</span>
+          </div>
+          <div class="rp-swatch">
+            <div class="rp-swatch-colour" style="background:#f5f4f0; border:1px solid #ddd"></div>
+            <span class="rp-swatch-name">Off-white</span>
+            <span class="rp-swatch-hex">#f5f4f0</span>
+            <span class="rp-swatch-use">Page background</span>
+          </div>
+          <div class="rp-swatch">
+            <div class="rp-swatch-colour" style="background:#ffffff; border:1px solid #ddd"></div>
+            <span class="rp-swatch-name">White</span>
+            <span class="rp-swatch-hex">#ffffff</span>
+            <span class="rp-swatch-use">Cards · Sections</span>
+          </div>
+          <div class="rp-swatch">
+            <div class="rp-swatch-colour" style="background:#c9942a"></div>
+            <span class="rp-swatch-name">Gold</span>
+            <span class="rp-swatch-hex">#c9942a</span>
+            <span class="rp-swatch-use">Accent highlights</span>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <h3 class="rp-sub-heading">Typography</h3>
+        <p>
+          The site uses two typefaces loaded from
+          <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">Google Fonts</a>:
+        </p>
+        <ul class="rp-list">
+          <li>
+            <strong>Merriweather</strong> (serif) — used for all headings
+            (<code>h1</code>, <code>h2</code>, <code>h3</code>). A serif face
+            conveys academic seriousness and readability, appropriate for an
+            educational resource.
+          </li>
+          <li>
+            <strong>Inter</strong> (sans-serif) — used for all body text,
+            navigation, and captions. A clean, highly legible typeface designed
+            specifically for screen reading.
+          </li>
+        </ul>
+        <p>
+          Font sizes use the
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp" target="_blank" rel="noopener noreferrer" data-tip="CSS clamp() sets a value that scales fluidly between a minimum and maximum — useful for responsive typography">CSS <code>clamp()</code> function</a>
+          for fluid scaling — headings grow and shrink smoothly between screen
+          sizes without fixed breakpoints.
+        </p>
+
+        <!-- Layout -->
+        <h3 class="rp-sub-heading">Layout</h3>
+        <p>
+          Page content is constrained to a maximum width of
+          <code>1060px</code> and centred with <code>margin: 0 auto</code>, keeping
+          lines of text readable even on wide screens. The site uses
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noopener noreferrer" data-tip="CSS Grid — a two-dimensional layout system for arranging elements in rows and columns">CSS Grid</a>
+          for multi-column layouts (cards, comparison tables, two-column sections)
+          and
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noopener noreferrer" data-tip="CSS Flexbox — a one-dimensional layout system for arranging elements in a row or column">CSS Flexbox</a>
+          for one-dimensional arrangements (navigation, stat strips, footer).
+          <code>padding</code>, <code>margin</code>, and <code>gap</code> properties
+          control all spacing. <code>border-radius</code> creates the rounded card
+          corners. <code>box-shadow</code> lifts cards off the background to create
+          visual depth.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: HTML and CSS Logic -->
+    <section class="rp-section reveal" aria-labelledby="logic-heading">
+      <div class="rp-section-num">04</div>
+      <div class="rp-section-body">
+        <div class="section-label">HTML &amp; CSS Logic</div>
+        <h2 id="logic-heading" class="section-heading">How the Code Is Structured</h2>
+
+        <h3 class="rp-sub-heading">HTML Structure</h3>
+        <p>
+          Every page uses the same semantic HTML skeleton, ensuring consistency
+          across the site. Semantic tags are used throughout — not for visual
+          reasons, but because they communicate meaning about the content they
+          contain:
+        </p>
+
+        <div class="rp-code-table">
+          <div class="rp-code-row rp-code-header">
+            <span>HTML Tag</span>
+            <span>What it contains</span>
+            <span>Why it was used</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;nav&gt;</code>
+            <span>Navigation links</span>
+            <span>Signals navigability to browsers and screen readers</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;main&gt;</code>
+            <span>Primary page content</span>
+            <span>Identifies the central content, skipping nav and footer</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;section&gt;</code>
+            <span>Thematic content blocks</span>
+            <span>Groups related content with a clear heading</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;article&gt;</code>
+            <span>Individual cards</span>
+            <span>Marks self-contained content items</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;figure&gt;</code>
+            <span>Images with captions</span>
+            <span>Associates an image with its description accessibly</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;footer&gt;</code>
+            <span>Authors and project info</span>
+            <span>Marks supplementary page metadata</span>
+          </div>
+          <div class="rp-code-row">
+            <code>&lt;aside&gt;</code>
+            <span>Sidebar quote and image</span>
+            <span>Marks content tangentially related to the main text</span>
+          </div>
+        </div>
+
+        <h3 class="rp-sub-heading">CSS Architecture</h3>
+        <p>
+          All styling is contained in a single external file,
+          <code>styles.css</code>, linked to all four pages via the
+          <code>&lt;link rel="stylesheet"&gt;</code> tag. This means any
+          change to the stylesheet is instantly reflected across the entire site —
+          a direct application of the separation of structure (HTML) and
+          presentation (CSS).
+        </p>
+        <p>
+          The CSS file is organised into sections using comments, moving from
+          global rules (CSS variables, reset, typography) to shared components
+          (navbar, buttons, cards, footer) and then to page-specific additions.
+          Each page's unique components use a distinctive class prefix to avoid
+          conflicts: <code>.vtl-</code> for the timeline, <code>.ww-</code> for
+          How It Works, and <code>.rp-</code> for this report page.
+        </p>
+
+        <h3 class="rp-sub-heading">CSS Custom Properties</h3>
+        <p>
+          All colours, fonts, spacing values, and shadows are defined as CSS
+          custom properties in the <code>:root</code> block:
+        </p>
+        <div class="ww-code-block">
+          <code>:root {
+  --c-navy:        #0e1a2b;
+  --c-blue:        #0057a8;
+  --c-bg:          #f5f4f0;
+  --c-surface:     #ffffff;
+  --font-display:  'Merriweather', Georgia, serif;
+  --font-body:     'Inter', Arial, sans-serif;
+  --radius-lg:     12px;
+  --shadow-md:     0 6px 24px rgba(0,0,0,0.10);
+}</code>
+        </div>
+        <p>
+          This system means the entire visual identity of the site can be changed
+          by editing just a handful of lines at the top of the CSS file.
+        </p>
+
+        <h3 class="rp-sub-heading">Accessibility</h3>
+        <p>
+          All non-text content has descriptive <code>alt</code> attributes. All
+          navigation elements have <code>aria-label</code> attributes. The active
+          page in the navbar uses <code>aria-current="page"</code>. Images use
+          <code>loading="lazy"</code> for performance. Links open in new tabs with
+          <code>target="_blank" rel="noopener noreferrer"</code> for security.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Interactive Features -->
+    <section class="rp-section reveal" aria-labelledby="features-heading">
+      <div class="rp-section-num">05</div>
+      <div class="rp-section-body">
+        <div class="section-label">Interactive Features</div>
+        <h2 id="features-heading" class="section-heading">What Makes the Site Interactive</h2>
+        <p>
+          Beyond static HTML and CSS, the site uses a small amount of JavaScript
+          and advanced CSS to create interactive and dynamic behaviour:
+        </p>
+
+        <div class="rp-feature-grid">
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">✨</div>
+            <h3>Scroll Reveal Animation</h3>
+            <p>
+              Sections fade in and slide up as the user scrolls down the page.
+              This uses the browser's
+              <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">IntersectionObserver API</a>
+              — a JavaScript tool that fires when an element enters the viewport.
+              The animation itself is pure CSS transitions on <code>opacity</code>
+              and <code>transform</code>.
+            </p>
+          </div>
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">💬</div>
+            <h3>Hover Tooltips</h3>
+            <p>
+              Key technical terms throughout the site show a popup definition when
+              hovered over. These use pure
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>
+              — the <code>::after</code> pseudo-element combined with
+              <code>content: attr(data-tip)</code> reads the tooltip text directly
+              from the HTML attribute. No JavaScript required.
+            </p>
+          </div>
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">🖱️</div>
+            <h3>Hover Effects on Cards</h3>
+            <p>
+              Cards across the site lift and shift slightly on hover using
+              <code>transform: translateY(-3px)</code> and an increased
+              <code>box-shadow</code>, both animated with CSS
+              <code>transition</code>. On the Timeline page, cards slide right
+              with <code>transform: translateX(6px)</code>.
+            </p>
+          </div>
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">📌</div>
+            <h3>Sticky Navigation</h3>
+            <p>
+              The navigation bar uses <code>position: sticky; top: 0</code> to
+              remain visible as the user scrolls. The active page is highlighted
+              with a blue background using the <code>nav-active</code> class,
+              which sets <code>background-color</code> and <code>color</code>.
+            </p>
+          </div>
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">📅</div>
+            <h3>Visual Timeline</h3>
+            <p>
+              The Timeline page uses a vertical line drawn with a CSS
+              <code>::before</code> pseudo-element on the <code>.vtl-track</code>
+              container. Each era card is positioned with flexbox and uses
+              <code>border-left</code> to connect visually to the line. The dot
+              markers scale on hover using <code>transform: scale(1.35)</code>.
+            </p>
+          </div>
+          <div class="rp-feature-card reveal">
+            <div class="rp-feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>
+              CSS <code>@media</code> queries adjust the layout for screens
+              narrower than 820px and 600px. Multi-column grids collapse to a
+              single column. The navbar stacks vertically. Font sizes use
+              <code>clamp()</code> to scale fluidly without fixed breakpoints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Challenges -->
+    <section class="rp-section reveal" aria-labelledby="challenges-heading">
+      <div class="rp-section-num">06</div>
+      <div class="rp-section-body">
+        <div class="section-label">Challenges</div>
+        <h2 id="challenges-heading" class="section-heading">Technical Challenges Encountered</h2>
+
+        <div class="rp-challenge-list">
+          <div class="rp-challenge reveal">
+            <div class="rp-challenge-icon">⚙️</div>
+            <div class="rp-challenge-body">
+              <h3>Understanding CSS from Scratch</h3>
+              <p>
+                Since we did not use a template, every CSS property had to be
+                written and understood from first principles. Concepts like the
+                <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model" target="_blank" rel="noopener noreferrer">CSS box model</a>,
+                specificity, and the difference between <code>margin</code> and
+                <code>padding</code> required careful study before we could apply
+                them correctly. We referenced
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+                extensively throughout the process.
+              </p>
+            </div>
+          </div>
+
+          <div class="rp-challenge reveal">
+            <div class="rp-challenge-icon">🖼️</div>
+            <div class="rp-challenge-body">
+              <h3>Image Hosting and External Links</h3>
+              <p>
+                We encountered difficulty embedding images from external sources
+                such as CERN and Wikimedia Commons, as many servers block
+                hotlinking (direct embedding of images hosted elsewhere). The
+                solution was to upload our images directly to the GitHub repository
+                so they are served from the same domain as the site, ensuring
+                they always load correctly.
+              </p>
+            </div>
+          </div>
+
+          <div class="rp-challenge reveal">
+            <div class="rp-challenge-icon">📐</div>
+            <div class="rp-challenge-body">
+              <h3>Sidebar Layout and Sticky Positioning</h3>
+              <p>
+                On the Home page, the quote box and Tim Berners-Lee image sit in
+                a sidebar next to the main text. Getting the sticky positioning
+                to work correctly — so the image stays fixed while the quote
+                scrolls over it — required careful use of <code>position: sticky</code>,
+                <code>z-index</code> layering, and <code>align-self: stretch</code>
+                on the grid container. Duplicate CSS rules accumulated over
+                iterations caused conflicts that had to be systematically
+                identified and resolved.
+              </p>
+            </div>
+          </div>
+
+          <div class="rp-challenge reveal">
+            <div class="rp-challenge-icon">📱</div>
+            <div class="rp-challenge-body">
+              <h3>Responsive Design</h3>
+              <p>
+                Making the site work well on smaller screens required writing
+                CSS <code>@media</code> queries that collapsed multi-column grids
+                to single columns, stacked the navbar vertically, and adjusted
+                padding and font sizes. The main challenge was ensuring that
+                interactive elements (like the vertical timeline and the sticky
+                sidebar) degraded gracefully on mobile without breaking the layout.
+              </p>
+            </div>
+          </div>
+
+          <div class="rp-challenge reveal">
+            <div class="rp-challenge-icon">🎨</div>
+            <div class="rp-challenge-body">
+              <h3>Maintaining CSS Consistency Across Four Pages</h3>
+              <p>
+                As the site grew to four pages with increasingly complex
+                components, maintaining a single shared <code>styles.css</code>
+                file without rules from one page affecting another required
+                discipline. We solved this by prefixing every page-specific CSS
+                class with a unique identifier (<code>.vtl-</code>,
+                <code>.ww-</code>, <code>.rp-</code>), ensuring complete isolation
+                between page-specific styles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="references-section reveal" id="references" aria-labelledby="refs-heading">
+      <div class="refs-header">
+        <h2 id="refs-heading">References &amp; Further Reading</h2>
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+      </div>
+      <ol>
+        <li>MDN Web Docs. <em>CSS Custom Properties.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>CSS Grid Layout.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>CSS Flexbox.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>IntersectionObserver API.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>Responsive Design.</em> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>The Box Model.</em> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>GitHub. <em>GitHub Pages Documentation.</em> <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">pages.github.com</a></li>
+        <li>Google Fonts. <em>Merriweather &amp; Inter.</em> <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">fonts.google.com</a></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ABOUT STRIP -->
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-block">
+        <span class="about-label">Project</span>
+        <span class="about-value">CHS — Computer Science for Humanities</span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Programme</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MA in Semiotics</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">University</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Authors</span>
+        <span class="about-value">Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">History of the Web</span>
+        <p>CHS Project — <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a><br>
+        <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="history.html">Timeline</a>
         <a href="web-works.html">How It Works</a>
         <a href="report.html">Report</a>
-      </div>
-    </nav>
-    <h1>Implementation Report</h1>
-    <p>This page explains how the website was planned, structured and styled.</p>
-  </header>
-
-  <main class="container">
-    <section class="simple-section">
-      <h2>Structure Choice</h2>
-      <p>
-     We did not use a pre-made template for this website. Instead, we created a simple custom static website using only HTML and CSS. This choice helped us better understand how a website is structured and gave us direct control over the pages, navigation, layout, colors and fonts.
-      </p>
-    </section>
-
-    <section class="simple-section">
-      <h2>Information Architecture</h2>
-      <p>
-        The menu has four pages. The Home page introduces the topic. The Timeline page explains the historical
-        development of the Web. The How It Works page explains the technical process behind opening a website.
-        The Report page documents our design and implementation choices. This order moves from general context
-        to technical explanation and then to reflection on our own work.
-      </p>
-    </section>
-
-    <section class="simple-section">
-      <h2>Stylistic Choices</h2>
-      <p>
-        We used nude and neutral colors because the topic is historical and educational. The soft background makes
-        the website calm and readable. The rounded cards and simple typography create a modern but minimal style.
-        In CSS, we changed properties such as background-color, color, font-family, padding, margin, border-radius
-        and box-shadow.
-      </p>
-    </section>
-
-    <section class="simple-section">
-      <h2>HTML and CSS logic</h2>
-      <p>
-        The HTML structure uses semantic tags. The &lt;header&gt; contains the title and navigation. The &lt;main&gt;
-        contains the central content. The &lt;section&gt; elements divide the page into logical blocks. The &lt;footer&gt;
-        gives project information. The external CSS file, styles.css, is connected to all pages with the &lt;link&gt;
-        tag, so the design remains consistent across the whole site.
-      </p>
-    </section>
-
-    <section class="simple-section">
-      <h2>Challenges</h2>
-      <p>
-        1. Learning and understanding the role of each CSS element used in the website. Since we did not use a pre-made template, we had to understand how every CSS property affected the final visual result, such as colors, spacing, margins, padding, borders, font size, layout, and responsive design.
-        2. Creating a navigation system that was clear but not too complex. 
-        3. Making the design work well on smaller screens, such as phones or tablets.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Pariya Nouri — Sogol Kasaei — Asad Ur Rab Jaffry</p>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      <span class="footer-updated">Last updated: June 2026</span>
+    </div>
   </footer>
+
+  <!-- SCROLL REVEAL -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+
 </body>
 </html>
