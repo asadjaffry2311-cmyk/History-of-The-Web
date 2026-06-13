@@ -754,3 +754,425 @@ td a { font-weight: 600; }
   th, td { padding: 10px 12px; }
   .footer-inner { flex-direction: column; gap: 24px; padding: 32px 20px 24px; }
 }
+
+
+/* =============================================
+   NEW COMPONENTS — added in upgrade
+   ============================================= */
+
+/* ---------- Did You Know Banner ---------- */
+.did-you-know {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(90deg, #0e2a4a 0%, #1a3d6b 100%);
+  border-left: 4px solid var(--c-gold);
+  border-radius: var(--radius-lg);
+  padding: 18px 28px;
+  margin: 40px 0;
+}
+
+.dyk-label {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--c-gold);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+}
+
+.dyk-text {
+  font-size: 15px;
+  color: #c8ddf0;
+  line-height: 1.6;
+}
+
+.dyk-text a {
+  color: #9ec8f0;
+  font-weight: 600;
+}
+.dyk-text a:hover { color: #ffffff; }
+
+/* ---------- Callout Box ---------- */
+.callout-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--c-accent-bg);
+  border: 1px solid #c0d6ee;
+  border-left: 4px solid var(--c-blue);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-top: 24px;
+}
+
+.callout-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.callout-box strong {
+  display: block;
+  color: var(--c-navy);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.callout-box p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--c-text-mid);
+  line-height: 1.55;
+}
+
+.callout-box a {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Sidebar Right (quote + image) ---------- */
+.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: sticky;
+  top: 90px;
+}
+
+.pull-quote {
+  background: var(--c-accent-bg);
+  border-left: 4px solid var(--c-blue);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
+}
+
+.pull-quote p {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--c-navy);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.pull-quote p::before { content: '\201C'; }
+.pull-quote p::after  { content: '\201D'; }
+
+.pull-quote cite {
+  font-size: 13px;
+  color: var(--c-text-soft);
+  font-style: normal;
+}
+.pull-quote cite a { font-size: 13px; }
+
+/* ---------- Side Figure (image in sidebar) ---------- */
+.side-figure {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-md);
+}
+
+.side-figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.side-figure figcaption {
+  padding: 10px 14px;
+  font-size: 12px;
+  color: var(--c-text-soft);
+  background: var(--c-surface);
+  line-height: 1.5;
+  border-top: 1px solid var(--c-border);
+}
+
+.side-figure figcaption a {
+  font-size: 12px;
+}
+
+/* ---------- Inline Figure (image above table) ---------- */
+.inline-figure {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 24px;
+}
+
+.inline-figure img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.inline-figure figcaption {
+  padding: 12px 18px;
+  font-size: 13px;
+  color: var(--c-text-soft);
+  background: var(--c-surface);
+  line-height: 1.55;
+  border-top: 1px solid var(--c-border);
+}
+
+.inline-figure figcaption a { font-size: 13px; }
+
+/* ---------- Timeline Preview Strip ---------- */
+.timeline-preview {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin: 40px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.tp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.tp-see-all {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-blue);
+  text-decoration: none;
+}
+.tp-see-all:hover { text-decoration: underline; }
+
+.tp-track {
+  position: relative;
+  padding: 20px 0 0;
+}
+
+.tp-line {
+  position: absolute;
+  top: 28px;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--c-blue), #6ba8d8);
+  border-radius: 2px;
+}
+
+.tp-items {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.tp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.tp-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--c-surface);
+  border: 2.5px solid var(--c-blue);
+  flex-shrink: 0;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.tp-dot--highlight {
+  background: var(--c-blue);
+  border-color: var(--c-blue);
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 0 0 4px rgba(0, 87, 168, 0.15);
+}
+
+.tp-item:hover .tp-dot {
+  background: var(--c-blue);
+  transform: scale(1.2);
+}
+
+.tp-year {
+  font-family: var(--font-serif);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--c-navy);
+}
+
+.tp-event {
+  font-size: 12px;
+  color: var(--c-text-soft);
+  text-align: center;
+  max-width: 70px;
+  line-height: 1.3;
+}
+
+/* ---------- CSS Tooltips ---------- */
+.tooltip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1.5px dashed var(--c-blue);
+  color: var(--c-text-mid);
+}
+
+.tooltip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-navy);
+  color: #d0e4f7;
+  font-size: 12px;
+  font-family: var(--font-sans);
+  font-style: normal;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  max-width: 260px;
+  white-space: normal;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 50;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--c-navy);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 50;
+}
+
+.tooltip:hover::after,
+.tooltip:hover::before {
+  opacity: 1;
+}
+
+/* ---------- References — Back to Top ---------- */
+.refs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.refs-header h2 { margin-bottom: 0; border: none; padding: 0; }
+
+.back-to-top {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-blue);
+  text-decoration: none;
+  padding: 6px 14px;
+  border: 1px solid var(--c-blue);
+  border-radius: 100px;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.back-to-top:hover {
+  background: var(--c-blue);
+  color: #ffffff;
+}
+
+/* ---------- About This Project Strip ---------- */
+.about-strip {
+  background: var(--c-navy-mid);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 28px var(--pad-x);
+}
+
+.about-strip-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.about-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--c-gold);
+}
+
+.about-value {
+  font-size: 14px;
+  color: #c0d4e8;
+  line-height: 1.4;
+}
+
+.about-sep {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+/* ---------- Footer bottom row upgrade ---------- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-updated {
+  font-size: 13px;
+  color: #556a7e;
+}
+
+/* ---------- Responsive additions ---------- */
+@media (max-width: 900px) {
+  .did-you-know { flex-direction: column; gap: 8px; }
+  .dyk-label { align-self: flex-start; }
+  .sidebar-right { position: static; }
+  .about-strip-inner { flex-direction: column; gap: 16px; }
+  .about-sep { width: 60px; height: 1px; }
+  .tp-event { display: none; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .timeline-preview { padding: 20px 18px; }
+  .tp-year { font-size: 13px; }
+  .refs-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .callout-box { flex-direction: column; gap: 10px; }
+}
