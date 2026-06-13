@@ -1092,7 +1092,15 @@ td a { font-weight: 600; }
   border-bottom-color: #ffffff;
 }
 
-/* ---------- References — Back to Top ---------- */
+/* Table term links — plain style, no dashed underline */
+.table-wrap td a {
+  color: var(--c-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  border-bottom: none;
+  font-weight: 600;
+}
+.table-wrap td a:hover { color: var(--c-blue-light); }
 .refs-header {
   display: flex;
   justify-content: space-between;
