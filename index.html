@@ -11,6 +11,9 @@
 </head>
 <body>
 
+  <!-- id="top" here so back-to-top scrolls to very top, not mid-page -->
+  <div id="top"></div>
+
   <!-- ===== TOP BAR ===== -->
   <div class="topbar">
     <span>
@@ -78,7 +81,21 @@
   </div>
 
   <!-- ===== MAIN ===== -->
-  <main class="page-wrap" id="main-content">
+  <main class="page-wrap">
+
+    <!-- ── DID YOU KNOW BANNER — placed first so it grabs attention immediately ── -->
+    <div class="did-you-know" role="note">
+      <span class="dyk-label">Did you know?</span>
+      <span class="dyk-text">
+        The world's first website is still online today — you can visit it at
+        <a href="http://info.cern.ch" target="_blank" rel="noopener noreferrer">info.cern.ch</a>,
+        exactly as
+        <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Berners-Lee</a>
+        hosted it on his NeXT computer at
+        <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>
+        in 1991.
+      </span>
+    </div>
 
     <!-- ── SECTION: Three Lenses ── -->
     <section class="section" aria-labelledby="covers-heading">
@@ -141,20 +158,6 @@
       </div>
     </section>
 
-    <!-- ── DID YOU KNOW BANNER ── -->
-    <div class="did-you-know" role="note">
-      <span class="dyk-label">Did you know?</span>
-      <span class="dyk-text">
-        The world's first website is still online today — you can visit it at
-        <a href="http://info.cern.ch" target="_blank" rel="noopener noreferrer">info.cern.ch</a>,
-        exactly as
-        <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Berners-Lee</a>
-        hosted it on his NeXT computer at
-        <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>
-        in 1991.
-      </span>
-    </div>
-
     <hr class="divider">
 
     <!-- ── SECTION: Why This Topic Matters ── -->
@@ -188,7 +191,9 @@
             famously chose not to patent the Web, making it a public good. As
             <a class="tooltip-link" href="https://home.web.cern.ch/news/news/computing/world-wide-web-born-cern-25-years-ago" target="_blank" rel="noopener noreferrer" data-tip="CERN's official record of the Web's 25th anniversary — covering its release into the public domain">CERN records</a>,
             in 1993 the source code was released on a royalty-free basis — a decision
-            that shaped everything that followed.
+            that shaped everything that followed. Studying the Web means asking not just
+            <em>how</em> it works, but <em>why</em> it was built the way it was — and
+            what values those choices encoded.
           </p>
 
           <p>
@@ -236,14 +241,17 @@
 
           <figure class="side-figure">
             <img
-              src="https://home.cern/wp-content/uploads/2026/03/bernerslee_1.jpg-1024x657.webp"
-              alt="Tim Berners-Lee at CERN, where he invented the World Wide Web in 1989"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/First_Web_Server.jpg/640px-First_Web_Server.jpg"
+              alt="The NeXT computer used by Tim Berners-Lee as the world's first web server at CERN in 1990, with a label reading 'This machine is a server. DO NOT POWER IT DOWN!!'"
               loading="lazy"
-              onerror="this.parentElement.style.display='none'"
             >
             <figcaption>
-              Tim Berners-Lee at CERN, where he invented the Web in 1989.
-              <a href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer">© CERN</a>
+              The NeXT computer used by
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Berners-Lee</a>
+              as the world's first web server at
+              <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>,
+              1990. The label reads: <em>"DO NOT POWER IT DOWN!!"</em>
+              <a href="https://commons.wikimedia.org/wiki/File:First_Web_Server.jpg" target="_blank" rel="noopener noreferrer">© CERN / Wikimedia Commons</a>
             </figcaption>
           </figure>
         </aside>
@@ -301,18 +309,17 @@
 
       <figure class="inline-figure">
         <img
-          src="https://home.cern/wp-content/uploads/2026/04/image-1024x761.png"
-          alt="Screenshot of the first web browser WorldWideWeb running on a NeXT computer at CERN in 1993, showing early hypertext navigation"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WorldWideWeb_FSF_GNU.png/1200px-WorldWideWeb_FSF_GNU.png"
+          alt="Screenshot of the WorldWideWeb browser, the world's first web browser created by Tim Berners-Lee in 1990, showing its hypertext interface on a NeXT computer"
           loading="lazy"
-          onerror="this.parentElement.style.display='none'"
         >
         <figcaption>
-          The first web browser, <em>WorldWideWeb</em>, running on a NeXT computer at
-          <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>,
-          1993. The interface already featured clickable
+          The first web browser, <em>WorldWideWeb</em>, created by
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Berners-Lee</a>
+          in 1990. The interface already featured clickable
           <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer" data-tip="A clickable reference connecting one document to another anywhere on the Web">hyperlinks</a>
-          and text formatting.
-          <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web" target="_blank" rel="noopener noreferrer">© CERN</a>
+          and live text editing.
+          <a href="https://commons.wikimedia.org/wiki/File:WorldWideWeb_FSF_GNU.png" target="_blank" rel="noopener noreferrer">© CERN / Wikimedia Commons</a>
         </figcaption>
       </figure>
 
@@ -404,7 +411,7 @@
     <section class="references-section" id="references" aria-labelledby="refs-heading">
       <div class="refs-header">
         <h2 id="refs-heading">References &amp; Further Reading</h2>
-        <a href="#main-content" class="back-to-top" aria-label="Back to top of page">↑ Back to top</a>
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">↑ Back to top</a>
       </div>
       <ol>
         <li>CERN. <em>A short history of the Web.</em>
