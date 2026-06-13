@@ -7,276 +7,314 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="site-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <a class="logo" href="index.html">History of the Web</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-active" aria-current="page">Home</a>
-        <a href="history.html">Timeline</a>
-        <a href="web-works.html">How It Works</a>
-        <a href="report.html">Report</a>
-      </div>
-    </nav>
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <span>MS Semiotics · Università di Bologna · CHS Project</span>
+  </div>
 
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <p class="tag">Educational Resource · MS Semiotics · Università di Bologna</p>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">History of the Web</a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-active" aria-current="page">Home</a>
+      <a href="history.html">Timeline</a>
+      <a href="web-works.html">How It Works</a>
+      <a href="report.html">Report</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Educational Resource · Web Technologies · Semiotics</p>
       <h1 id="hero-heading">From Connected Computers<br>to a Global System of Meaning</h1>
       <p class="hero-sub">
-        On 12 March 1989, a British scientist named Tim Berners-Lee submitted a document
-        at <a href="https://home.cern/science/computing/birth-web" target="_blank" rel="noopener noreferrer">CERN</a>
-        titled <em>"Information Management: A Proposal."</em> His boss labelled it
-        <em>"vague but exciting."</em> That proposal became the World Wide Web — and today
-        more than <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">6 billion people</a>
-        use it every day.
+        On 12 March 1989, British scientist
+        <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer">Tim Berners-Lee</a>
+        submitted a document at CERN titled <em>"Information Management: A Proposal."</em>
+        His boss labelled it <em>"vague but exciting."</em>
+        That proposal became the <a href="https://en.wikipedia.org/wiki/World_Wide_Web" target="_blank" rel="noopener noreferrer">World Wide Web</a>.
       </p>
       <div class="hero-actions">
-        <a class="button" href="history.html">Explore the Timeline →</a>
-        <a class="button-ghost" href="web-works.html">How the Web Works</a>
+        <a class="btn-primary" href="history.html">Explore the Timeline</a>
+        <a class="btn-outline" href="web-works.html">How the Web Works</a>
       </div>
-    </section>
-  </header>
+    </div>
+  </section>
 
-  <!-- MAIN -->
-  <main class="container" id="main-content">
-
-    <!-- Stat banner -->
-    <section class="stat-row" aria-label="Key facts about the Web">
+  <!-- ===== STAT STRIP ===== -->
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
       <div class="stat-item">
-        <span class="stat-number">1989</span>
-        <span class="stat-label">Year Berners-Lee submitted his original proposal at CERN</span>
+        <span class="stat-num">1989</span>
+        <span class="stat-label">Year Berners-Lee proposed the Web at CERN</span>
       </div>
-      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-sep"></div>
       <div class="stat-item">
-        <span class="stat-number">6B+</span>
-        <span class="stat-label">Internet users worldwide as of 2025, per <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">DataReportal</a></span>
+        <span class="stat-num">6B+</span>
+        <span class="stat-label">Internet users worldwide in 2025 — <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">DataReportal</a></span>
       </div>
-      <div class="stat-divider" aria-hidden="true"></div>
+      <div class="stat-sep"></div>
       <div class="stat-item">
-        <span class="stat-number">1.9B</span>
-        <span class="stat-label">Websites in existence today, per <a href="https://colorlib.com/wp/internet-stats/" target="_blank" rel="noopener noreferrer">Colorlib</a></span>
+        <span class="stat-num">1.9B</span>
+        <span class="stat-label">Websites in existence today — <a href="https://colorlib.com/wp/internet-stats/" target="_blank" rel="noopener noreferrer">Colorlib</a></span>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Three topic cards -->
-    <section class="cards-section" aria-labelledby="topics-heading">
-      <h2 id="topics-heading" class="section-title">What This Site Covers</h2>
-      <div class="card-grid">
+  <!-- ===== MAIN ===== -->
+  <main class="page-wrap">
 
+    <!-- What this site covers -->
+    <section class="section" aria-labelledby="covers-heading">
+      <div class="section-label">What This Site Covers</div>
+      <h2 id="covers-heading" class="section-heading">Three Lenses on the Web</h2>
+      <p class="section-intro">
+        This site approaches the Web from three angles: its historical development,
+        its technical architecture, and its cultural significance as a system of signs.
+      </p>
+
+      <div class="card-row">
         <article class="card">
-          <div class="card-icon" aria-hidden="true">📡</div>
-          <h3>1. Historical Development</h3>
+          <div class="card-num">01</div>
+          <h3>Historical Development</h3>
           <p>
-            The Web grew out of decades of networked computing research, beginning with the
-            <a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer">ARPANET</a>
-            experiments of the 1960s. According to
-            <a href="https://home.cern/science/computing/birth-web" target="_blank" rel="noopener noreferrer">CERN</a>,
-            the Web was originally designed so that scientists across the world could
-            automatically share information — it only became a public tool later.
-            Each milestone introduced a key concept: hypertext, URLs, HTTP, and the browser.
+            The Web grew out of decades of research into networked computing, beginning
+            with <a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer">ARPANET</a>
+            in the 1960s. According to
+            <a href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer">CERN</a>,
+            it was originally designed so that scientists across the world could share
+            information automatically — it only became a public tool after 1991.
           </p>
           <a class="card-link" href="history.html">See the full timeline →</a>
         </article>
 
         <article class="card">
-          <div class="card-icon" aria-hidden="true">⚙️</div>
-          <h3>2. Technical Structure</h3>
+          <div class="card-num">02</div>
+          <h3>Technical Structure</h3>
           <p>
-            Behind every webpage is a conversation between a client and a server, governed
-            by protocols. According to
-            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>,
-            when you type a URL, your browser asks DNS to find the correct IP address,
-            sends an HTTP request to the web server, and receives HTML and CSS files back
-            — all in a fraction of a second.
+            Behind every webpage is a conversation between a client and a server,
+            governed by
+            <a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">protocols</a>.
+            When you type a URL, DNS translates it into an IP address, TCP/IP routes
+            the request in packets, and HTTP defines how the server responds — all in
+            milliseconds. Explained in full on
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
           </p>
           <a class="card-link" href="web-works.html">Understand how it works →</a>
         </article>
 
         <article class="card">
-          <div class="card-icon" aria-hidden="true">🔤</div>
-          <h3>3. Semiotic Relevance</h3>
+          <div class="card-num">03</div>
+          <h3>Semiotic Relevance</h3>
           <p>
-            The Web is not only a technical system — it is a space of signs. Links structure
-            navigation as a form of argument. Layouts guide attention and imply hierarchy.
-            Interfaces encode assumptions about users. As
-            <a href="https://www.w3.org/People/Berners-Lee/" target="_blank" rel="noopener noreferrer">Tim Berners-Lee</a>
-            himself wrote, the Web was designed to be a medium of human communication —
-            which makes it a natural object of semiotic analysis.
+            <a href="https://en.wikipedia.org/wiki/Semiotics" target="_blank" rel="noopener noreferrer">Semiotics</a>
+            — the study of signs and meaning — applies directly to the Web. Links
+            structure navigation as argument. Layouts encode hierarchy. Interfaces
+            make assumptions about users. As
+            <a href="https://www.w3.org/People/Berners-Lee/" target="_blank" rel="noopener noreferrer">Berners-Lee</a>
+            wrote, the Web was designed as a medium of human communication, making
+            it a natural object of semiotic analysis.
           </p>
           <a class="card-link" href="report.html">Read the reflection →</a>
         </article>
-
       </div>
     </section>
 
-    <!-- Why this topic matters -->
-    <section class="simple-section" aria-labelledby="why-heading">
-      <h2 id="why-heading">Why This Topic Matters</h2>
-      <p>
-        The history of the Web is not simply a history of technology. It is a history of
-        how human communication was reorganised. Before 1991, documents lived in libraries
-        and archives — separate, static, difficult to connect. The invention of the
-        <strong>hyperlink</strong> changed that: any document could now point to any other
-        document, anywhere in the world. According to the
-        <a href="https://webfoundation.org/about/vision/history-of-the-web/" target="_blank" rel="noopener noreferrer">World Wide Web Foundation</a>,
-        this single structural change rewired how knowledge is produced, stored, and shared.
-      </p>
-      <p>
-        At the same time, this transformation did not happen automatically. It required
-        deliberate choices — about protocols, about open standards, and about access.
-        Crucially, Tim Berners-Lee chose not to patent the Web.
-        As <a href="https://home.web.cern.ch/news/news/computing/world-wide-web-born-cern-25-years-ago" target="_blank" rel="noopener noreferrer">CERN notes</a>,
-        in 1993 CERN put the World Wide Web software in the public domain, ensuring it
-        could be freely used and built upon by anyone. That decision shaped everything
-        that followed. Studying the Web means asking not just <em>how</em> it works, but
-        <em>why</em> it was built the way it was — and what values those choices encoded.
-      </p>
-      <p>
-        For students of semiotics, the Web is a particularly rich object of study.
-        The concepts used to analyse signs — structure, code, context, interpretation —
-        apply directly to HTML, CSS, hyperlinks, and interface design. The
-        <a href="https://www.w3.org/about/history" target="_blank" rel="noopener noreferrer">World Wide Web Consortium (W3C)</a>,
-        founded by Berners-Lee in 1994, continues to govern the open standards that keep
-        the Web a shared, interoperable space. This site attempts to make that connection
-        between technology and meaning explicit.
-      </p>
+    <hr class="divider">
+
+    <!-- Why this topic matters — with ALL 8 inline links -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="section-label">Context</div>
+      <h2 id="why-heading" class="section-heading">Why This Topic Matters</h2>
+
+      <div class="prose-columns">
+        <div class="prose-body">
+
+          <p>
+            The <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web" target="_blank" rel="noopener noreferrer">history of the Web</a>
+            is not simply a history of technology. It is a history of how human communication
+            was reorganised. Before the
+            <a href="https://en.wikipedia.org/wiki/World_Wide_Web" target="_blank" rel="noopener noreferrer">Web</a>,
+            documents lived in libraries, archives, and filing cabinets — separate, static,
+            and difficult to connect. After 1991, any document could link to any other
+            document, anywhere on the planet, instantly. That single structural change —
+            the <a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer">hyperlink</a>
+            — rewired how knowledge is produced, stored, and shared.
+          </p>
+
+          <p>
+            At the same time, this transformation did not happen automatically. It required
+            decisions: about
+            <a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">protocols</a>,
+            about open standards, about who could publish and who could access.
+            <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer">Tim Berners-Lee</a>
+            famously chose not to patent the Web, making it a public good. As
+            <a href="https://home.web.cern.ch/news/news/computing/world-wide-web-born-cern-25-years-ago" target="_blank" rel="noopener noreferrer">CERN records</a>,
+            in 1993 the source code was released on a royalty-free basis — a decision
+            that shaped everything that followed. Studying the Web means asking not just
+            <em>how</em> it works, but <em>why</em> it was built the way it was — and
+            what values those choices encoded.
+          </p>
+
+          <p>
+            For students of
+            <a href="https://en.wikipedia.org/wiki/Semiotics" target="_blank" rel="noopener noreferrer">semiotics</a>,
+            the Web is a particularly rich object of study. It is simultaneously an
+            infrastructure and a text, a medium and a message. The concepts we use to
+            analyse signs — structure, code, context, interpretation — apply directly to
+            <a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">HTML</a>,
+            <a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">CSS</a>,
+            <a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer">hyperlinks</a>,
+            and interface design. This site attempts to make that connection explicit.
+          </p>
+
+        </div>
+
+        <!-- Sidebar quote -->
+        <aside class="pull-quote" aria-label="Key quote">
+          <blockquote>
+            "The Web is more a social creation than a technical one. I designed it for a social
+            effect — to help people work together — and not as a technical toy."
+          </blockquote>
+          <cite>— <a href="https://www.w3.org/People/Berners-Lee/" target="_blank" rel="noopener noreferrer">Tim Berners-Lee</a>,
+          inventor of the World Wide Web</cite>
+        </aside>
+      </div>
     </section>
+
+    <hr class="divider">
 
     <!-- Key concepts table -->
-    <section class="simple-section" aria-labelledby="concepts-heading">
-      <h2 id="concepts-heading">Key Concepts at a Glance</h2>
-      <p>
-        These are the core technical terms used throughout this site. Each is explained
-        in more depth on the <a href="web-works.html">How It Works</a> and
-        <a href="history.html">Timeline</a> pages. Definitions are based on
+    <section class="section" aria-labelledby="concepts-heading">
+      <div class="section-label">Reference</div>
+      <h2 id="concepts-heading" class="section-heading">Key Concepts at a Glance</h2>
+      <p class="section-intro">
+        Core technical terms used throughout this site. Definitions follow the
         <a href="https://developer.mozilla.org/en-US/docs/Glossary" target="_blank" rel="noopener noreferrer">MDN Web Docs Glossary</a>.
       </p>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Term</th>
-            <th scope="col">What it means</th>
-            <th scope="col">Why it matters</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noopener noreferrer">HTML</a></strong></td>
-            <td>HyperText Markup Language — the structure of a web page</td>
-            <td>Defines what content exists and how it is organised</td>
-          </tr>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank" rel="noopener noreferrer">CSS</a></strong></td>
-            <td>Cascading Style Sheets — the visual style of a page</td>
-            <td>Controls how content looks: colour, font, and layout</td>
-          </tr>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer">HTTP</a></strong></td>
-            <td>HyperText Transfer Protocol — the rules for exchanging data on the Web</td>
-            <td>Governs how browsers request pages and how servers respond</td>
-          </tr>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer">DNS</a></strong></td>
-            <td>Domain Name System — the Web's address book</td>
-            <td>Translates human-readable URLs into numeric IP addresses</td>
-          </tr>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/TCP" target="_blank" rel="noopener noreferrer">TCP/IP</a></strong></td>
-            <td>Transmission Control Protocol / Internet Protocol</td>
-            <td>Breaks data into packets and routes them across the network</td>
-          </tr>
-          <tr>
-            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer">URL</a></strong></td>
-            <td>Uniform Resource Locator — a web address</td>
-            <td>Identifies the precise location of any resource on the Web</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Term</th>
+              <th scope="col">Full name</th>
+              <th scope="col">What it does</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer"><strong>HTML</strong></a></td>
+              <td>HyperText Markup Language</td>
+              <td>Defines the structure and content of a web page using tags</td>
+            </tr>
+            <tr>
+              <td><a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer"><strong>CSS</strong></a></td>
+              <td>Cascading Style Sheets</td>
+              <td>Controls the visual presentation: colour, font, layout, spacing</td>
+            </tr>
+            <tr>
+              <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer"><strong>HTTP</strong></a></td>
+              <td>HyperText Transfer Protocol</td>
+              <td>The rules governing how browsers request and servers deliver pages</td>
+            </tr>
+            <tr>
+              <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer"><strong>DNS</strong></a></td>
+              <td>Domain Name System</td>
+              <td>Translates human-readable domain names into numeric IP addresses</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer"><strong>TCP/IP</strong></a></td>
+              <td>Transmission Control Protocol / Internet Protocol</td>
+              <td>Breaks data into packets and routes them across the network reliably</td>
+            </tr>
+            <tr>
+              <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer"><strong>URL</strong></a></td>
+              <td>Uniform Resource Locator</td>
+              <td>The unique address that identifies any resource on the Web</td>
+            </tr>
+            <tr>
+              <td><a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer"><strong>Hyperlink</strong></a></td>
+              <td>Hyperlink</td>
+              <td>A clickable reference connecting one document to another anywhere on the Web</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <!-- How to navigate -->
-    <section class="simple-section" aria-labelledby="navigate-heading">
-      <h2 id="navigate-heading">How to Navigate This Site</h2>
-      <p>This site is designed to be read in order, though each page works independently:</p>
-      <ol class="nav-guide">
-        <li>
-          <strong><a href="history.html">Timeline</a></strong> — A chronological walk
-          through the history of the Web, from ARPANET in the 1960s to the social and
-          mobile Web of today. Includes a comparison table and a glossary of key terms.
-        </li>
-        <li>
-          <strong><a href="web-works.html">How It Works</a></strong> — A step-by-step
-          technical explanation of what happens when you open a website: DNS lookups,
-          HTTP requests, HTML rendering, and the client-server model, with a visual diagram.
-        </li>
-        <li>
-          <strong><a href="report.html">Report</a></strong> — Documentation of how this
-          site was planned, structured, and built. Covers design choices, CSS decisions,
-          information architecture, and challenges encountered during development.
-        </li>
-      </ol>
+    <hr class="divider">
+
+    <!-- Navigate the site -->
+    <section class="section" aria-labelledby="nav-heading">
+      <div class="section-label">Navigation</div>
+      <h2 id="nav-heading" class="section-heading">How to Navigate This Site</h2>
+      <div class="nav-cards">
+        <a class="nav-card" href="history.html">
+          <span class="nav-card-num">01</span>
+          <div>
+            <strong>Timeline</strong>
+            <p>A chronological walk through the history of the Web, from ARPANET in the 1960s to the social and mobile Web of today.</p>
+          </div>
+          <span class="nav-card-arrow">→</span>
+        </a>
+        <a class="nav-card" href="web-works.html">
+          <span class="nav-card-num">02</span>
+          <div>
+            <strong>How It Works</strong>
+            <p>A step-by-step technical explanation of DNS lookups, HTTP requests, HTML rendering, and the client-server model.</p>
+          </div>
+          <span class="nav-card-arrow">→</span>
+        </a>
+        <a class="nav-card" href="report.html">
+          <span class="nav-card-num">03</span>
+          <div>
+            <strong>Report</strong>
+            <p>Documentation of how this site was designed, structured, and coded — covering CSS decisions and development challenges.</p>
+          </div>
+          <span class="nav-card-arrow">→</span>
+        </a>
+      </div>
     </section>
 
     <!-- References -->
     <section class="references-section" aria-labelledby="refs-heading">
-      <h2 id="refs-heading">References & Further Reading</h2>
+      <h2 id="refs-heading">References &amp; Further Reading</h2>
       <ol>
-        <li>
-          CERN. <em>The birth of the Web.</em>
-          <a href="https://home.cern/science/computing/birth-web" target="_blank" rel="noopener noreferrer">https://home.cern/science/computing/birth-web</a>
-        </li>
-        <li>
-          CERN. <em>A short history of the Web.</em>
-          <a href="https://home.cern/science/computing/birth-web/short-history-web" target="_blank" rel="noopener noreferrer">https://home.cern/science/computing/birth-web/short-history-web</a>
-        </li>
-        <li>
-          World Wide Web Foundation. <em>History of the Web.</em>
-          <a href="https://webfoundation.org/about/vision/history-of-the-web/" target="_blank" rel="noopener noreferrer">https://webfoundation.org/about/vision/history-of-the-web/</a>
-        </li>
-        <li>
-          W3C. <em>About W3C — History.</em>
-          <a href="https://www.w3.org/about/history" target="_blank" rel="noopener noreferrer">https://www.w3.org/about/history</a>
-        </li>
-        <li>
-          Tim Berners-Lee. <em>Biography.</em> W3C.
-          <a href="https://www.w3.org/People/Berners-Lee/" target="_blank" rel="noopener noreferrer">https://www.w3.org/People/Berners-Lee/</a>
-        </li>
-        <li>
-          MDN Web Docs. <em>How the Web works.</em>
-          <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
-        </li>
-        <li>
-          DataReportal. <em>Digital Around the World, 2026.</em>
-          <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">https://datareportal.com/global-digital-overview</a>
-        </li>
-        <li>
-          Wikipedia. <em>History of the World Wide Web.</em>
-          <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web</a>
-        </li>
+        <li>CERN. <em>A short history of the Web.</em> <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web" target="_blank" rel="noopener noreferrer">home.cern/science/computing/the-birth-of-the-web/short-history-web</a></li>
+        <li>World Wide Web Foundation. <em>History of the Web.</em> <a href="https://webfoundation.org/about/vision/history-of-the-web/" target="_blank" rel="noopener noreferrer">webfoundation.org/about/vision/history-of-the-web</a></li>
+        <li>W3C. <em>About W3C — History.</em> <a href="https://www.w3.org/about/history" target="_blank" rel="noopener noreferrer">w3.org/about/history</a></li>
+        <li>Tim Berners-Lee. <em>Biography.</em> W3C. <a href="https://www.w3.org/People/Berners-Lee/" target="_blank" rel="noopener noreferrer">w3.org/People/Berners-Lee</a></li>
+        <li>MDN Web Docs. <em>How the Web works.</em> <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>Cloudflare. <em>What is the Internet Protocol?</em> <a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">cloudflare.com/learning</a></li>
+        <li>DataReportal. <em>Digital Around the World, 2026.</em> <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">datareportal.com/global-digital-overview</a></li>
+        <li>Wikipedia. <em>History of the World Wide Web.</em> <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/History_of_the_World_Wide_Web</a></li>
       </ol>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
     <div class="footer-inner">
-      <p class="footer-project">
-        <strong>History of the Web</strong> — CHS Project, MS Semiotics,
-        Alma Mater Studiorum – Università di Bologna
-      </p>
-      <p class="footer-authors">Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</p>
+      <div class="footer-brand">
+        <span class="footer-logo">History of the Web</span>
+        <p>CHS Project — MS Semiotics<br>Alma Mater Studiorum – Università di Bologna</p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="index.html">Home</a> ·
-        <a href="history.html">Timeline</a> ·
-        <a href="web-works.html">How It Works</a> ·
+        <a href="index.html">Home</a>
+        <a href="history.html">Timeline</a>
+        <a href="web-works.html">How It Works</a>
         <a href="report.html">Report</a>
       </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
     </div>
   </footer>
 
