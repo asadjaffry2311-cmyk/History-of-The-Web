@@ -1138,6 +1138,27 @@ td a { font-weight: 600; }
   line-height: 1.4;
 }
 
+.about-value a {
+  color: #9ec8f0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.about-value a:hover { color: #ffffff; }
+
+.topbar a {
+  color: #c0d4e8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.topbar a:hover { color: #ffffff; }
+
+.footer-brand p a {
+  color: #9ec8f0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-brand p a:hover { color: #ffffff; }
+
 .about-sep {
   width: 1px;
   height: 40px;
