@@ -3,62 +3,598 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How It Works</title>
+  <title>How It Works — History of the Web</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
-    <nav class="navbar">
-      <a class="logo" href="index.html">History of the Web</a>
-      <div class="nav-links">
+
+  <!-- TOP BAR -->
+  <div id="top" class="topbar">
+    <span>
+      <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a>
+      · <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Università di Bologna</a>
+      · CHS Project
+    </span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">History of the Web</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="history.html">Timeline</a>
+      <a href="web-works.html" class="nav-active" aria-current="page">How It Works</a>
+      <a href="report.html">Report</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Technical Explanation</div>
+      <h1>How the Web Works</h1>
+      <p class="lead">
+        Every time you open a website, a precise sequence of technical steps
+        takes place in milliseconds. This page breaks down that process — from
+        typing a URL to seeing a page on your screen — using the core concepts
+        of client-server architecture,
+        <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer" data-tip="Domain Name System — translates human-readable domain names into IP addresses">DNS</a>,
+        <a class="tooltip-link" href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol / Internet Protocol — routes data in packets across the network">TCP/IP</a>,
+        <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the rules browsers and servers use to communicate">HTTP</a>,
+        <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>,
+        and
+        <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- DID YOU KNOW -->
+    <div class="did-you-know" role="note" style="margin-top:40px">
+      <span class="dyk-label">Did you know?</span>
+      <span class="dyk-text">
+        When you open a webpage, your browser can make over
+        <strong>100 separate HTTP requests</strong> — one for the HTML file, then
+        individual requests for every image, CSS file, font, and script. According
+        to <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>,
+        all of this happens in under a second on a modern connection.
+      </span>
+    </div>
+
+    <!-- SECTION 1: Step by Step Flow -->
+    <section class="ww-section reveal" aria-labelledby="steps-heading">
+      <div class="section-label">The Process</div>
+      <h2 id="steps-heading" class="section-heading">What Happens When You Open a Website</h2>
+      <p class="section-intro">
+        According to <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>,
+        every web request follows six distinct steps. Each step depends on a different
+        protocol or technology — and together they make the Web work seamlessly.
+      </p>
+
+      <!-- Visual flow diagram -->
+      <div class="ww-flow" aria-label="Visual diagram of the six steps of a web request">
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">💻</div>
+          <div class="ww-flow-label">You type a URL</div>
+          <div class="ww-flow-sub">in your browser</div>
+        </div>
+        <div class="ww-flow-arrow" aria-hidden="true">→</div>
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">📖</div>
+          <div class="ww-flow-label">DNS Lookup</div>
+          <div class="ww-flow-sub">name → IP address</div>
+        </div>
+        <div class="ww-flow-arrow" aria-hidden="true">→</div>
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">🔌</div>
+          <div class="ww-flow-label">TCP Connection</div>
+          <div class="ww-flow-sub">browser ↔ server</div>
+        </div>
+        <div class="ww-flow-arrow" aria-hidden="true">→</div>
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">📤</div>
+          <div class="ww-flow-label">HTTP Request</div>
+          <div class="ww-flow-sub">GET /index.html</div>
+        </div>
+        <div class="ww-flow-arrow" aria-hidden="true">→</div>
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">📥</div>
+          <div class="ww-flow-label">HTTP Response</div>
+          <div class="ww-flow-sub">200 OK + HTML</div>
+        </div>
+        <div class="ww-flow-arrow" aria-hidden="true">→</div>
+        <div class="ww-flow-node">
+          <div class="ww-flow-icon">🖥️</div>
+          <div class="ww-flow-label">Page Renders</div>
+          <div class="ww-flow-sub">HTML + CSS → screen</div>
+        </div>
+      </div>
+
+      <!-- Numbered steps -->
+      <ol class="ww-steps">
+        <li class="ww-step reveal">
+          <div class="ww-step-num">1</div>
+          <div class="ww-step-body">
+            <h3>You type a URL</h3>
+            <p>
+              A <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer" data-tip="Uniform Resource Locator — the unique address of any resource on the Web">URL</a>
+              (Uniform Resource Locator) is the address of a specific resource on the Web.
+              For example, <code>https://example.com/page.html</code> tells the browser
+              three things: use the
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the secure version is HTTPS">HTTPS</a>
+              protocol, contact the server at <code>example.com</code>, and retrieve
+              the file <code>/page.html</code>.
+            </p>
+          </div>
+        </li>
+
+        <li class="ww-step reveal">
+          <div class="ww-step-num">2</div>
+          <div class="ww-step-body">
+            <h3>DNS Lookup — translating the name into an address</h3>
+            <p>
+              Computers do not understand domain names like <em>example.com</em> —
+              they only understand numerical
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener noreferrer" data-tip="Internet Protocol address — a numerical label identifying a device on a network">IP addresses</a>
+              such as <code>93.184.216.34</code>. The
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer" data-tip="Domain Name System — translates human-readable domain names into IP addresses">DNS</a>
+              (Domain Name System) works like the internet's phone book: it translates
+              the human-readable domain name into the correct IP address. According to
+              <a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">Cloudflare</a>,
+              this lookup usually takes just a few milliseconds because results are
+              cached on your device, router, and internet provider.
+            </p>
+          </div>
+        </li>
+
+        <li class="ww-step reveal">
+          <div class="ww-step-num">3</div>
+          <div class="ww-step-body">
+            <h3>TCP Connection — establishing the channel</h3>
+            <p>
+              Once the browser knows the server's IP address, it opens a connection
+              using
+              <a class="tooltip-link" href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol / Internet Protocol — the foundational communication rules of the Internet">TCP/IP</a>
+              (Transmission Control Protocol / Internet Protocol).
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/TCP" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol — ensures data packets are delivered reliably and in order">TCP</a>
+              ensures that data is delivered reliably and in the correct order.
+              As <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN</a>
+              explains, the browser and server perform a "TCP handshake" — a
+              three-step process (SYN, SYN-ACK, ACK) where both sides agree to
+              communicate before any data is exchanged.
+            </p>
+          </div>
+        </li>
+
+        <li class="ww-step reveal">
+          <div class="ww-step-num">4</div>
+          <div class="ww-step-body">
+            <h3>HTTP Request — asking for the page</h3>
+            <p>
+              The browser sends an
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the rules browsers and servers use to communicate">HTTP</a>
+              request to the server. The most common type is a
+              <strong>GET request</strong> — asking the server to return a specific
+              file. According to
+              <a href="https://backend.turing.edu/module2/lessons/how_the_web_works_http" target="_blank" rel="noopener noreferrer">Turing School</a>,
+              a typical request looks like:
+            </p>
+            <div class="ww-code-block">
+              <code>GET /index.html HTTP/1.1<br>
+              Host: example.com<br>
+              Accept: text/html</code>
+            </div>
+            <p>
+              This tells the server: "Please send me the file <code>index.html</code>
+              using HTTP version 1.1, and I can accept HTML content."
+            </p>
+          </div>
+        </li>
+
+        <li class="ww-step reveal">
+          <div class="ww-step-num">5</div>
+          <div class="ww-step-body">
+            <h3>HTTP Response — the server replies</h3>
+            <p>
+              The server processes the request and sends back an HTTP response.
+              The response includes a <strong>status code</strong> — a three-digit
+              number telling the browser whether the request succeeded. The most
+              important codes are:
+            </p>
+            <div class="ww-status-grid">
+              <div class="ww-status ww-status--ok">
+                <span class="ww-status-code">200</span>
+                <span class="ww-status-label">OK — success, file returned</span>
+              </div>
+              <div class="ww-status ww-status--redirect">
+                <span class="ww-status-code">301</span>
+                <span class="ww-status-label">Moved — page has a new URL</span>
+              </div>
+              <div class="ww-status ww-status--error">
+                <span class="ww-status-code">404</span>
+                <span class="ww-status-label">Not Found — file doesn't exist</span>
+              </div>
+              <div class="ww-status ww-status--server">
+                <span class="ww-status-code">500</span>
+                <span class="ww-status-label">Server Error — something went wrong</span>
+              </div>
+            </div>
+            <p style="margin-top:12px">
+              Source: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status" target="_blank" rel="noopener noreferrer">MDN HTTP Status Codes</a>
+            </p>
+          </div>
+        </li>
+
+        <li class="ww-step reveal">
+          <div class="ww-step-num">6</div>
+          <div class="ww-step-body">
+            <h3>The browser renders the page</h3>
+            <p>
+              Once the browser receives the
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>
+              file, it reads it line by line and builds a visual page. If the HTML
+              references a
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>
+              file, the browser makes a separate HTTP request to fetch it. CSS
+              tells the browser how to style the page — colours, fonts, spacing,
+              and layout. As <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN</a>
+              explains, this whole process — from typing a URL to seeing a rendered
+              page — typically takes less than <strong>one second</strong>.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SECTION 2: Client-Server -->
+    <section class="ww-section reveal" aria-labelledby="cs-heading">
+      <div class="section-label">Architecture</div>
+      <h2 id="cs-heading" class="section-heading">Client-Server Architecture</h2>
+      <div class="ww-two-col">
+        <div>
+          <p>
+            The Web is built on a <strong>client-server model</strong>. According to
+            <a href="https://backend.turing.edu/module2/lessons/how_the_web_works_http" target="_blank" rel="noopener noreferrer">Turing School</a>,
+            in this model the <em>client</em> is always the one that initiates
+            communication, and the <em>server</em> is always the one that responds.
+            Neither side can do anything without the other.
+          </p>
+          <p>
+            The <strong>client</strong> is your web browser — Chrome, Firefox, Safari,
+            or Edge. It is the software that sends requests and displays responses.
+            The person using the browser is called the <em>user</em>, but the technical
+            client is always the browser itself.
+          </p>
+          <p>
+            The <strong>server</strong> is a computer permanently connected to the
+            internet, storing website files and waiting for requests. As
+            <a href="https://elementor.com/blog/what-is-a-web-server/" target="_blank" rel="noopener noreferrer">Elementor</a>
+            explains, for a static site (like this one), the server simply sends
+            pre-made
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>
+            and
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>
+            files. For a dynamic site (like Facebook), the server runs code and
+            queries a database to build a unique page for each user.
+          </p>
+        </div>
+        <div class="ww-cs-diagram" aria-label="Client-server architecture diagram">
+          <div class="ww-cs-box ww-cs-client">
+            <div class="ww-cs-icon">💻</div>
+            <strong>Client</strong>
+            <span>Web Browser</span>
+            <span class="ww-cs-examples">Chrome · Firefox · Safari</span>
+          </div>
+          <div class="ww-cs-arrows">
+            <div class="ww-cs-arrow ww-cs-arrow--right">
+              <span>HTTP Request →</span>
+              <small>GET /index.html</small>
+            </div>
+            <div class="ww-cs-arrow ww-cs-arrow--left">
+              <span>← HTTP Response</span>
+              <small>200 OK + HTML file</small>
+            </div>
+          </div>
+          <div class="ww-cs-box ww-cs-server">
+            <div class="ww-cs-icon">🖥️</div>
+            <strong>Server</strong>
+            <span>Web Server</span>
+            <span class="ww-cs-examples">Stores HTML · CSS · images</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: HTML and CSS -->
+    <section class="ww-section reveal" aria-labelledby="html-heading">
+      <div class="section-label">Languages</div>
+      <h2 id="html-heading" class="section-heading">HTML and CSS — Structure and Style</h2>
+      <div class="ww-two-col">
+        <div class="ww-lang-card">
+          <div class="ww-lang-badge" style="background:#e8f4fd; color:#0057a8; border-color:#b8d9f5">
+            <span>HTML</span>
+          </div>
+          <h3>HyperText Markup Language</h3>
+          <p>
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure and content of a web page">HTML</a>
+            is the skeleton of every web page. It uses
+            <strong>tags</strong> — labels wrapped in angle brackets — to define
+            what each piece of content is. According to
+            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noopener noreferrer">MDN</a>,
+            a browser reads HTML tags and decides how to treat each element.
+          </p>
+          <div class="ww-code-block">
+            <code>
+              &lt;header&gt; — top section of a page &lt;/header&gt;<br>
+              &lt;nav&gt; — navigation menu &lt;/nav&gt;<br>
+              &lt;section&gt; — a thematic section &lt;/section&gt;<br>
+              &lt;p&gt; — a paragraph of text &lt;/p&gt;<br>
+              &lt;a href="..."&gt; — a hyperlink &lt;/a&gt;<br>
+              &lt;footer&gt; — bottom section &lt;/footer&gt;
+            </code>
+          </div>
+          <p>
+            The <code>&lt;a&gt;</code> tag (anchor) is particularly important —
+            it creates
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer" data-tip="A clickable reference connecting one document to another — the fundamental structure of the Web">hyperlinks</a>,
+            the foundational structure of the entire Web.
+          </p>
+        </div>
+
+        <div class="ww-lang-card">
+          <div class="ww-lang-badge" style="background:#fff4e6; color:#b85c00; border-color:#f5d0a0">
+            <span>CSS</span>
+          </div>
+          <h3>Cascading Style Sheets</h3>
+          <p>
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a web page">CSS</a>
+            is the visual layer of a web page. Where HTML defines
+            <em>what</em> content is, CSS defines <em>how it looks</em>.
+            According to <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank" rel="noopener noreferrer">MDN</a>,
+            CSS uses <strong>selectors</strong> to target HTML elements and
+            <strong>properties</strong> to control their appearance.
+          </p>
+          <div class="ww-code-block">
+            <code>
+              color — text colour<br>
+              font-family — typeface<br>
+              margin / padding — spacing<br>
+              border-radius — rounded corners<br>
+              background-color — fill colour<br>
+              display: flex — layout method
+            </code>
+          </div>
+          <p>
+            CSS also allows websites to respond to different screen sizes using
+            <strong>media queries</strong> — rules that apply only when the screen
+            is above or below a certain width, enabling
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">responsive design</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DNS and TCP/IP deeper -->
+    <section class="ww-section reveal" aria-labelledby="protocols-heading">
+      <div class="section-label">Protocols</div>
+      <h2 id="protocols-heading" class="section-heading">DNS, TCP/IP and How Data Travels</h2>
+      <p class="section-intro">
+        Two systems — DNS and TCP/IP — work invisibly every time you load a page.
+        Together they handle the translation of names into addresses and the
+        reliable transport of data across the network.
+      </p>
+      <div class="ww-protocol-grid">
+        <div class="ww-protocol-card reveal">
+          <div class="ww-protocol-icon">📖</div>
+          <h3><a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer" data-tip="Domain Name System — translates domain names into IP addresses">DNS</a> — The Internet's Address Book</h3>
+          <p>
+            DNS stands for <strong>Domain Name System</strong>. Every device
+            connected to the internet has a unique
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener noreferrer" data-tip="Internet Protocol address — a numerical label identifying a device on a network">IP address</a>
+            — a number like <code>142.250.185.46</code>. DNS translates the
+            human-readable domain name (like <em>google.com</em>) into that
+            number. As <a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">Cloudflare</a>
+            explains, DNS was invented in 1983 by Paul Mockapetris and introduced
+            the familiar domain extensions: <em>.com</em>, <em>.org</em>,
+            <em>.net</em>, <em>.edu</em>.
+          </p>
+        </div>
+        <div class="ww-protocol-card reveal">
+          <div class="ww-protocol-icon">📦</div>
+          <h3><a class="tooltip-link" href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol / Internet Protocol">TCP/IP</a> — Moving Data in Packets</h3>
+          <p>
+            <strong>TCP/IP</strong> is actually two protocols working together.
+            <strong>IP</strong> (Internet Protocol) gives every device an address
+            and routes data packets from source to destination.
+            <strong>TCP</strong> (Transmission Control Protocol) breaks data into
+            packets, sends them, and checks that every packet arrives correctly —
+            resending any that are lost. According to
+            <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">MDN</a>,
+            packets can travel different routes across the internet and are
+            reassembled in the correct order at the destination.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Semiotic angle -->
+    <section class="semiotic-callout reveal" aria-labelledby="semiotics-ww-heading">
+      <div class="sc-icon" aria-hidden="true">🔤</div>
+      <div class="sc-body">
+        <h2 id="semiotics-ww-heading">A Semiotic Perspective on Web Architecture</h2>
+        <p>
+          The client-server model is not just a technical architecture — it is also
+          a <strong>semiotic structure</strong>. Every HTTP request is a sign act:
+          the browser (sender) produces a message (the request) addressed to a server
+          (receiver) using a shared code (
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the shared communication code of the Web">HTTP</a>).
+          The server interprets the message and produces a response — another sign
+          act in the opposite direction. From a semiotic viewpoint, the Web is a
+          continuous exchange of signs between machines, governed by protocols that
+          function as shared <em>codes</em>.
+        </p>
+        <p>
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>
+          tags can themselves be read as signs: <code>&lt;h1&gt;</code> signals
+          primary importance; <code>&lt;nav&gt;</code> signals navigability;
+          <code>&lt;footer&gt;</code> signals closure. These are not arbitrary
+          choices — they encode assumptions about how documents should be read,
+          what counts as primary, and how users should move through information.
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>
+          then adds a second layer of sign systems — colour, size, spacing — that
+          carries cultural meaning independently of the text content.
+        </p>
+      </div>
+    </section>
+
+    <!-- QUICK REFERENCE TABLE -->
+    <section class="table-section reveal" aria-labelledby="ref-table-heading">
+      <h2 id="ref-table-heading">Quick Reference — Key Terms</h2>
+      <p style="margin-bottom:16px; color:var(--c-text-mid); font-size:15px">
+        All the technical terms used on this page, with definitions and sources.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Term</th>
+            <th scope="col">What it does</th>
+            <th scope="col">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer">URL</a></strong></td>
+            <td>The unique address identifying any resource on the Web</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer">DNS</a></strong></td>
+            <td>Translates domain names into IP addresses</td>
+            <td><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">Cloudflare</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener noreferrer">IP Address</a></strong></td>
+            <td>A numerical label identifying a device on a network</td>
+            <td><a href="https://en.wikipedia.org/wiki/IP_address" target="_blank" rel="noopener noreferrer">Wikipedia</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">TCP/IP</a></strong></td>
+            <td>Routes data in packets reliably across the internet</td>
+            <td><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">Cloudflare</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer">HTTP</a></strong></td>
+            <td>The protocol governing browser-server communication</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">HTML</a></strong></td>
+            <td>Defines the structure and content of a web page</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer">CSS</a></strong></td>
+            <td>Controls the visual appearance of a web page</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong>HTTP Status 200</strong></td>
+            <td>Request succeeded — the server returned the requested file</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong>HTTP Status 404</strong></td>
+            <td>Not Found — the requested file does not exist on the server</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="references-section" id="references" aria-labelledby="refs-heading">
+      <div class="refs-header">
+        <h2 id="refs-heading">References &amp; Further Reading</h2>
+        <a href="#top" class="back-to-top" aria-label="Back to top">↑ Back to top</a>
+      </div>
+      <ol>
+        <li>MDN Web Docs. <em>How the Web works.</em> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>Turing School. <em>How the Web Works, HTTP Request/Response Cycle.</em> <a href="https://backend.turing.edu/module2/lessons/how_the_web_works_http" target="_blank" rel="noopener noreferrer">backend.turing.edu</a></li>
+        <li>Cloudflare. <em>What is DNS?</em> <a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">cloudflare.com/learning/dns</a></li>
+        <li>Cloudflare. <em>What is the Internet Protocol?</em> <a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">cloudflare.com/learning</a></li>
+        <li>Elementor. <em>What Is a Web Server?</em> <a href="https://elementor.com/blog/what-is-a-web-server/" target="_blank" rel="noopener noreferrer">elementor.com/blog</a></li>
+        <li>MDN Web Docs. <em>HTTP Status Codes.</em> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>MDN Web Docs. <em>Responsive Design.</em> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer">developer.mozilla.org</a></li>
+        <li>Wikipedia. <em>World Wide Web.</em> <a href="https://en.wikipedia.org/wiki/World_Wide_Web" target="_blank" rel="noopener noreferrer">en.wikipedia.org</a></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ABOUT STRIP -->
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-block">
+        <span class="about-label">Project</span>
+        <span class="about-value">CHS — Computer Science for Humanities</span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Programme</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MA in Semiotics</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">University</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Authors</span>
+        <span class="about-value">Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">History of the Web</span>
+        <p>CHS Project — <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a><br>
+        <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="history.html">Timeline</a>
         <a href="web-works.html">How It Works</a>
         <a href="report.html">Report</a>
-      </div>
-    </nav>
-    <h1>How the Web Works</h1>
-    <p>This page explains the technical process behind opening a website in a browser.</p>
-  </header>
-
-  <main class="container">
-    <section class="simple-section">
-      <h2>Client-Server Architecture</h2>
-      <p>
-        The client is the user's device and browser. The server is the computer that stores the website files.
-        When we type a website address, the browser sends a request and the server sends back a response.
-      </p>
-
-      <div class="diagram">
-        <div>Browser<br><span>client</span></div>
-        <div class="arrow">→ request →</div>
-        <div>Web Server<br><span>HTML / CSS files</span></div>
-        <div class="arrow">→ response →</div>
-        <div>Page appears<br><span>on screen</span></div>
-      </div>
-    </section>
-
-    <section class="simple-section">
-      <h2>DNS, IP addresses, and TCP/IP</h2>
-      <p>
-        A domain name such as example.com is easy for humans to remember, but computers use IP addresses.
-        DNS works like an address book: it translates the domain name into the correct IP address. Then TCP/IP
-        helps the data travel across the network in packets.
-      </p>
-    </section>
-
-    <section class="simple-section">
-      <h2>HTML and CSS</h2>
-      <p>
-        HTML gives structure to a page. For example, tags such as &lt;header&gt;, &lt;nav&gt;, &lt;section&gt; and
-        &lt;footer&gt; divide the content into meaningful parts. CSS controls the visual style through properties
-        such as color, font-family, margin, padding, border-radius and background-color.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>Pariya Nouri — Sogol Kasaei — Asad Ur Rab Jaffry</p>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      <span class="footer-updated">Last updated: June 2026</span>
+    </div>
   </footer>
+
+  <!-- SCROLL REVEAL -->
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => obs.observe(el));
+  </script>
+
 </body>
 </html>
