@@ -3,96 +3,442 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timeline</title>
+  <title>Timeline — History of the Web</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="page-header">
-    <nav class="navbar">
-      <a class="logo" href="index.html">History of the Web</a>
-      <div class="nav-links">
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <span>
+      <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a>
+      · <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Università di Bologna</a>
+      · CHS Project
+    </span>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="logo" href="index.html">History of the Web</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="history.html" class="nav-active" aria-current="page">Timeline</a>
+      <a href="web-works.html">How It Works</a>
+      <a href="report.html">Report</a>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="section-label">Timeline</div>
+      <h1>Key Moments in the History of the Web</h1>
+      <p class="lead">
+        The Web did not appear overnight. It grew out of decades of research into
+        networking, protocols, and the desire to connect human knowledge across
+        machines. This timeline traces that journey — from the first computer
+        network in 1969 to the social and mobile Web of today.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container">
+
+    <!-- ── DID YOU KNOW BANNER ── -->
+    <div class="did-you-know" role="note" style="margin-top: 40px;">
+      <span class="dyk-label">Did you know?</span>
+      <span class="dyk-text">
+        The very first message ever sent over a computer network was just two letters:
+        <strong>"Lo"</strong> — sent on 29 October 1969 from
+        <a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer">ARPANET</a>
+        at UCLA to Stanford. The system crashed before the word "Login" could be completed.
+        Source: <a href="https://www.darpa.mil/news/features/arpanet" target="_blank" rel="noopener noreferrer">DARPA</a>
+      </span>
+    </div>
+
+    <!-- ── TIMELINE ITEMS ── -->
+    <section class="timeline-section" aria-labelledby="timeline-heading">
+      <h2 id="timeline-heading" class="section-heading" style="margin-top: 40px; margin-bottom: 24px;">The Full Timeline</h2>
+
+      <!-- 1960s -->
+      <div class="timeline-item">
+        <span class="timeline-year">1960s – 1970s</span>
+        <h2>Networks Before the Web</h2>
+        <p>
+          Long before the Web existed, researchers were already trying to connect
+          computers to one another. The key breakthrough came on
+          <strong>29 October 1969</strong>, when the U.S. Defense Department's
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer" data-tip="Advanced Research Projects Agency Network — the world's first packet-switched computer network">ARPANET</a>
+          sent its first message from
+          <a href="https://www.darpa.mil/news/features/arpanet" target="_blank" rel="noopener noreferrer">UCLA to Stanford</a>.
+          The message was meant to be "Login" — but the system crashed after just two
+          letters: <em>"Lo."</em>
+        </p>
+        <p>
+          ARPANET introduced the idea of
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Packet_switching" target="_blank" rel="noopener noreferrer" data-tip="A method of grouping data into packets that are transmitted independently across a network">packet switching</a>
+          — breaking data into small units that travel independently through the network
+          and are reassembled at the destination. This was radically different from the
+          telephone system, where a dedicated line was held open for each call. According
+          to <a href="https://developer.mozilla.org/en-US/docs/Glossary/Arpanet" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>,
+          ARPANET first ran the
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Network_Control_Protocol_(ARPANET)" target="_blank" rel="noopener noreferrer" data-tip="Network Control Protocol — the first protocol used on ARPANET before TCP/IP">NCP protocol</a>
+          and later the first version of TCP/IP, making it a direct ancestor of the
+          modern internet.
+        </p>
+        <figure class="timeline-figure">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Arpanet_logical_map%2C_march_1977.png"
+            alt="Logical map of ARPANET as of March 1977, showing the network of connected university and government computers across the United States"
+            loading="lazy"
+            onerror="this.parentElement.style.display='none'"
+          >
+          <figcaption>
+            Logical map of
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer" data-tip="The world's first packet-switched computer network, forerunner of the Internet">ARPANET</a>
+            as of March 1977, showing interconnected nodes across US universities and government institutions.
+            <a href="https://commons.wikimedia.org/wiki/File:Arpanet_logical_map,_march_1977.png" target="_blank" rel="noopener noreferrer">© Wikimedia Commons (Public Domain)</a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- 1980s -->
+      <div class="timeline-item">
+        <span class="timeline-year">1980s</span>
+        <h2>TCP/IP and the Birth of the Modern Internet</h2>
+        <p>
+          By the early 1980s, ARPANET had grown into a patchwork of different networks
+          that could not easily talk to each other. The solution was
+          <a class="tooltip-link" href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol / Internet Protocol — the foundational communication rules of the Internet">TCP/IP</a>,
+          developed by
+          <a href="https://en.wikipedia.org/wiki/Vint_Cerf" target="_blank" rel="noopener noreferrer">Vint Cerf</a>
+          and
+          <a href="https://en.wikipedia.org/wiki/Bob_Kahn" target="_blank" rel="noopener noreferrer">Bob Kahn</a>.
+          On <strong>1 January 1983</strong> — sometimes called "Flag Day" —
+          ARPANET switched entirely to TCP/IP, which
+          <a href="https://www.geeksforgeeks.org/websites-apps/history-of-internet/" target="_blank" rel="noopener noreferrer">GeeksforGeeks notes</a>
+          is celebrated as the official birth of the modern Internet.
+        </p>
+        <p>
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/TCP" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol — breaks data into packets and ensures they are delivered correctly">TCP</a>
+          handles reliability: it divides data into packets, sends them, and
+          checks that every packet arrives correctly. If a packet is lost, it is
+          resent. <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/IP_Address" target="_blank" rel="noopener noreferrer" data-tip="Internet Protocol — routes packets across networks using numerical addresses">IP</a>
+          handles routing: it gives every device a unique numerical address and
+          finds the best path for each packet to travel. Also in the 1980s, Paul
+          Mockapetris invented
+          <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer" data-tip="Domain Name System — translates human-readable domain names into IP addresses">DNS</a>,
+          introducing domains like <em>.com</em>, <em>.org</em>, and <em>.edu</em>
+          and making the internet far easier to navigate.
+        </p>
+      </div>
+
+      <!-- 1989–1991 -->
+      <div class="timeline-item">
+        <span class="timeline-year">1989 – 1991</span>
+        <h2>Tim Berners-Lee and the World Wide Web</h2>
+        <p>
+          On <strong>12 March 1989</strong>,
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Tim Berners-Lee</a>
+          submitted a proposal at
+          <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>
+          titled <em>"Information Management: A Proposal."</em> His supervisor annotated
+          it: <em>"Vague but exciting."</em> That document became the blueprint for the
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/World_Wide_Web" target="_blank" rel="noopener noreferrer" data-tip="A global system of interlinked hypertext documents accessed via the Internet">World Wide Web</a>.
+        </p>
+        <p>
+          By <strong>Christmas 1990</strong>, Berners-Lee had built the first web
+          browser (called <em>WorldWideWeb</em>), the first web server (running on his
+          NeXT computer), and defined the three core technologies that still underpin
+          every website today:
+        </p>
+        <ul class="timeline-list">
+          <li>
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>
+            — the language for writing web pages
+          </li>
+          <li>
+            <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the rules browsers and servers use to communicate">HTTP</a>
+            — the protocol for transferring pages between server and browser
+          </li>
+          <li>
+            <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer" data-tip="Uniform Resource Locator — the unique address of any resource on the Web">URLs</a>
+            — the addressing system that identifies every resource on the Web
+          </li>
+        </ul>
+        <p>
+          On <strong>6 August 1991</strong>, the first public website went live at
+          <a href="http://info.cern.ch" target="_blank" rel="noopener noreferrer">info.cern.ch</a>
+          — it is still accessible today. According to
+          <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web" target="_blank" rel="noopener noreferrer">CERN</a>,
+          on <strong>30 April 1993</strong>, CERN put the Web software in the public
+          domain — free for anyone to use. That single decision allowed the Web to
+          become a global public resource.
+        </p>
+        <figure class="timeline-figure">
+          <img
+            src="WorldWideWeb.png.png"
+            alt="Screenshot of the WorldWideWeb browser — the world's first web browser created by Tim Berners-Lee at CERN in 1990 — showing its HyperMedia Browser/Editor interface"
+            loading="lazy"
+          >
+          <figcaption>
+            The first web browser, <em>WorldWideWeb</em>, built by
+            <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Tim Berners-Lee</a>
+            at <a class="tooltip-link" href="https://home.cern/science/computing/the-birth-of-the-web" target="_blank" rel="noopener noreferrer" data-tip="European Organisation for Nuclear Research — birthplace of the Web">CERN</a>
+            in 1990. It was both a browser and an editor. Source:
+            <a href="https://commons.wikimedia.org/wiki/File:WorldWideWeb.png" target="_blank" rel="noopener noreferrer">Wikimedia Commons (Public Domain)</a>
+          </figcaption>
+        </figure>
+      </div>
+
+      <!-- 1990s -->
+      <div class="timeline-item">
+        <span class="timeline-year">1990s</span>
+        <h2>Browsers and Public Access</h2>
+        <p>
+          The Web remained a tool for scientists until
+          <strong>April 1993</strong>, when students at the University of Illinois
+          released
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Mosaic_(web_browser)" target="_blank" rel="noopener noreferrer" data-tip="The first web browser to display images and text together on a single page, released in 1993">Mosaic</a>
+          — the first browser to display images and text on the same page. It was free
+          to download and worked on Windows, Mac, and Unix. According to the
+          <a href="https://nsf.gov/news/mosaic-launches-internet-revolution" target="_blank" rel="noopener noreferrer">National Science Foundation</a>,
+          within 18 months of its launch, Mosaic had over a million users and the
+          number of websites grew from 130 in 1993 to over 100,000 by 1996.
+        </p>
+        <p>
+          In <strong>1994</strong>, Mosaic co-creator Marc Andreessen co-founded
+          <a href="https://en.wikipedia.org/wiki/Netscape" target="_blank" rel="noopener noreferrer">Netscape Communications</a>,
+          releasing Netscape Navigator — the browser that brought the Web into millions
+          of homes. That same year,
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Tim_Berners-Lee" target="_blank" rel="noopener noreferrer" data-tip="British computer scientist, inventor of the World Wide Web">Berners-Lee</a>
+          founded the
+          <a href="https://www.w3.org/about/history" target="_blank" rel="noopener noreferrer">World Wide Web Consortium (W3C)</a>
+          to maintain open standards for the Web — ensuring it would remain an
+          interoperable public resource rather than a proprietary platform. By 1995,
+          Netscape Navigator had around
+          <a href="https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet" target="_blank" rel="noopener noreferrer">10 million global users</a>.
+        </p>
+      </div>
+
+      <!-- 2000s -->
+      <div class="timeline-item">
+        <span class="timeline-year">2000s – Today</span>
+        <h2>The Dynamic, Social, and Mobile Web</h2>
+        <p>
+          The late 1990s saw a massive speculation bubble in internet companies —
+          the <a href="https://en.wikipedia.org/wiki/Dot-com_bubble" target="_blank" rel="noopener noreferrer">dot-com bubble</a>
+          — which burst in 2000–2001. But the Web itself survived and evolved. Around
+          <strong>2004</strong>, writers and technologists began describing a new
+          generation of the Web — often called
+          <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Web_2.0" target="_blank" rel="noopener noreferrer" data-tip="Web 2.0 — a term for websites that allow users to generate and share content, rather than just consume it">Web 2.0</a>
+          — characterised by user-generated content, social networks, and platforms
+          such as Wikipedia (2001), Facebook (2004), YouTube (2005), and Twitter (2006).
+        </p>
+        <p>
+          The launch of the
+          <a href="https://en.wikipedia.org/wiki/IPhone" target="_blank" rel="noopener noreferrer">iPhone</a>
+          in <strong>2007</strong> transformed how people accessed the Web. For the
+          first time, a full browser ran on a pocket-sized device, making the Web
+          truly mobile. Today, according to
+          <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">DataReportal</a>,
+          over <strong>6 billion people</strong> use the internet — the majority of
+          them through a mobile device. The Web has moved from a document-sharing
+          system to the primary infrastructure of global communication, commerce, and
+          culture.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ── COMPARISON TABLE ── -->
+    <section class="table-section" aria-labelledby="table-heading">
+      <h2 id="table-heading">Era Comparison</h2>
+      <p style="margin-bottom: 16px; color: var(--c-text-mid); font-size: 15px;">
+        How the purpose and key technologies of the Web changed across three major periods.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Period</th>
+            <th scope="col">Main goal</th>
+            <th scope="col">Key technology</th>
+            <th scope="col">Who used it</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1960s–1970s</strong><br>Early Networks</td>
+            <td>Connect computers for research and defence</td>
+            <td><a class="tooltip-link" href="https://en.wikipedia.org/wiki/Packet_switching" target="_blank" rel="noopener noreferrer" data-tip="Breaking data into small packets that travel independently across a network">Packet switching</a>, ARPANET</td>
+            <td>US government researchers and universities</td>
+          </tr>
+          <tr>
+            <td><strong>1980s</strong><br>Protocol Era</td>
+            <td>Make different networks communicate</td>
+            <td>
+              <a class="tooltip-link" href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer" data-tip="Transmission Control Protocol / Internet Protocol — the foundational rules of the Internet">TCP/IP</a>,
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer" data-tip="Domain Name System — translates domain names into IP addresses">DNS</a>
+            </td>
+            <td>Scientists and engineers</td>
+          </tr>
+          <tr>
+            <td><strong>1989–1991</strong><br>Birth of the Web</td>
+            <td>Connect documents through links</td>
+            <td>
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer" data-tip="HyperText Markup Language — defines the structure of a web page">HTML</a>,
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer" data-tip="HyperText Transfer Protocol — the rules browsers and servers use to communicate">HTTP</a>,
+              <a class="tooltip-link" href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer" data-tip="Uniform Resource Locator — the unique address of any resource on the Web">URLs</a>
+            </td>
+            <td>CERN physicists, then the public</td>
+          </tr>
+          <tr>
+            <td><strong>1993–1999</strong><br>Browser Age</td>
+            <td>Make the Web visual and accessible to everyone</td>
+            <td>Mosaic, Netscape Navigator, Internet Explorer</td>
+            <td>General public worldwide</td>
+          </tr>
+          <tr>
+            <td><strong>2000s–Today</strong><br>Social &amp; Mobile Web</td>
+            <td>Connect people and enable user-generated content</td>
+            <td>
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/Web_2.0" target="_blank" rel="noopener noreferrer" data-tip="Web 2.0 — websites that allow users to generate and share content">Web 2.0</a>,
+              <a class="tooltip-link" href="https://en.wikipedia.org/wiki/CSS" target="_blank" rel="noopener noreferrer" data-tip="Cascading Style Sheets — controls the visual appearance of a page">CSS</a>, APIs, smartphones
+            </td>
+            <td>6 billion+ users globally</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── GLOSSARY ── -->
+    <section class="simple-section" aria-labelledby="glossary-heading">
+      <h2 id="glossary-heading">Glossary of Key Terms</h2>
+      <p>Quick definitions of every technical term used on this page. Full explanations are on the <a href="web-works.html">How It Works</a> page.</p>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Term</th>
+            <th scope="col">Definition</th>
+            <th scope="col">Source</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/ARPANET" target="_blank" rel="noopener noreferrer">ARPANET</a></strong></td>
+            <td>The world's first packet-switched computer network, built in 1969 by the US Defense Department</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/Arpanet" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">TCP/IP</a></strong></td>
+            <td>The two foundational protocols that route data across the internet: TCP ensures reliable delivery, IP handles addressing</td>
+            <td><a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">Cloudflare</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer">DNS</a></strong></td>
+            <td>Domain Name System — translates human-readable addresses like "google.com" into numerical IP addresses</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/DNS" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/HTML" target="_blank" rel="noopener noreferrer">HTML</a></strong></td>
+            <td>HyperText Markup Language — the standard language for creating web pages</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer">HTTP</a></strong></td>
+            <td>HyperText Transfer Protocol — the rules governing how web browsers and servers exchange data</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTTP" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer">URL</a></strong></td>
+            <td>Uniform Resource Locator — the unique address of any resource on the Web</td>
+            <td><a href="https://developer.mozilla.org/en-US/docs/Glossary/URL" target="_blank" rel="noopener noreferrer">MDN</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer">Hyperlink</a></strong></td>
+            <td>A clickable reference that connects one document to another, forming the basic structure of the Web</td>
+            <td><a href="https://en.wikipedia.org/wiki/Hyperlink" target="_blank" rel="noopener noreferrer">Wikipedia</a></td>
+          </tr>
+          <tr>
+            <td><strong><a href="https://en.wikipedia.org/wiki/Web_2.0" target="_blank" rel="noopener noreferrer">Web 2.0</a></strong></td>
+            <td>A term for the generation of websites that allow users to create and share content, not just read it</td>
+            <td><a href="https://en.wikipedia.org/wiki/Web_2.0" target="_blank" rel="noopener noreferrer">Wikipedia</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── REFERENCES ── -->
+    <section class="references-section" id="references" aria-labelledby="refs-heading">
+      <div class="refs-header">
+        <h2 id="refs-heading">References &amp; Further Reading</h2>
+        <a href="#top" class="back-to-top" aria-label="Back to top of page">↑ Back to top</a>
+      </div>
+      <ol>
+        <li>DARPA. <em>ARPANET.</em> <a href="https://www.darpa.mil/news/features/arpanet" target="_blank" rel="noopener noreferrer">darpa.mil/news/features/arpanet</a></li>
+        <li>MDN Web Docs. <em>ARPANET.</em> <a href="https://developer.mozilla.org/en-US/docs/Glossary/Arpanet" target="_blank" rel="noopener noreferrer">developer.mozilla.org/en-US/docs/Glossary/Arpanet</a></li>
+        <li>GeeksforGeeks. <em>History of the Internet.</em> <a href="https://www.geeksforgeeks.org/websites-apps/history-of-internet/" target="_blank" rel="noopener noreferrer">geeksforgeeks.org</a></li>
+        <li>CERN. <em>A short history of the Web.</em> <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web" target="_blank" rel="noopener noreferrer">home.cern/science/computing/the-birth-of-the-web/short-history-web</a></li>
+        <li>National Science Foundation. <em>Mosaic Launches an Internet Revolution.</em> <a href="https://nsf.gov/news/mosaic-launches-internet-revolution" target="_blank" rel="noopener noreferrer">nsf.gov</a></li>
+        <li>Science and Media Museum. <em>A short history of the internet.</em> <a href="https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet" target="_blank" rel="noopener noreferrer">scienceandmediamuseum.org.uk</a></li>
+        <li>W3C. <em>About W3C — History.</em> <a href="https://www.w3.org/about/history" target="_blank" rel="noopener noreferrer">w3.org/about/history</a></li>
+        <li>Cloudflare. <em>What is the Internet Protocol?</em> <a href="https://www.cloudflare.com/learning/network-layer/internet-protocol/" target="_blank" rel="noopener noreferrer">cloudflare.com/learning</a></li>
+        <li>DataReportal. <em>Digital Around the World, 2026.</em> <a href="https://datareportal.com/global-digital-overview" target="_blank" rel="noopener noreferrer">datareportal.com/global-digital-overview</a></li>
+        <li>Wikipedia. <em>History of the World Wide Web.</em> <a href="https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank" rel="noopener noreferrer">en.wikipedia.org/wiki/History_of_the_World_Wide_Web</a></li>
+      </ol>
+    </section>
+
+  </main>
+
+  <!-- ===== ABOUT STRIP ===== -->
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <div class="about-block">
+        <span class="about-label">Project</span>
+        <span class="about-value">CHS — Computer Science for Humanities</span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Programme</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MA in Semiotics</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">University</span>
+        <span class="about-value"><a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></span>
+      </div>
+      <div class="about-sep"></div>
+      <div class="about-block">
+        <span class="about-label">Authors</span>
+        <span class="about-value">Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">History of the Web</span>
+        <p>CHS Project — <a href="https://www.unibo.it/en/study/second-cycle-degree/programme/2026/6824" target="_blank" rel="noopener noreferrer">MS Semiotics</a><br>
+        <a href="https://www.unibo.it/en/homepage" target="_blank" rel="noopener noreferrer">Alma Mater Studiorum – Università di Bologna</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="history.html">Timeline</a>
         <a href="web-works.html">How It Works</a>
         <a href="report.html">Report</a>
-      </div>
-    </nav>
-    <h1>Key Moments in the History of the Web</h1>
-    <p>The Web developed step by step: first as a document-sharing system and then as a public communication space.</p>
-  </header>
-
-  <main class="container">
-    <section class="timeline">
-      <div class="timeline-item">
-        <h2>1960s–1970s: Networks before the Web</h2>
-        <p>
-          Before the Web, computer networks already existed. The basic idea was to connect computers so
-          they could exchange information. This prepared the ground for later technologies such as TCP/IP.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h2>1980s: TCP/IP becomes Important</h2>
-        <p>
-          TCP/IP is a group of communication protocols. TCP helps divide and reassemble data packets.
-          IP helps identify where data has to go using IP addresses.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h2>1989–1991: Tim Berners-Lee and the World Wide Web</h2>
-        <p>
-          Tim Berners-Lee proposed a system based on hypertext, URLs, HTTP and HTML. This made it possible
-          to connect documents through links and access them with a browser.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h2>1990s: Browsers and Public access</h2>
-        <p>
-          Web browsers made the Web easier to use. People no longer needed to understand complex commands:
-          they could click links, read pages and navigate information visually.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h2>2000s–today: Dynamic and Social Web</h2>
-        <p>
-          The Web became more interactive. Users started to create content, share media, use platforms,
-          and access websites from many devices, especially smartphones.
-        </p>
-      </div>
-    </section>
-
-    <section class="table-section">
-      <h2>Simple comparison</h2>
-      <table>
-        <tr>
-          <th>Period</th>
-          <th>Main idea</th>
-          <th>Technical keyword</th>
-        </tr>
-        <tr>
-          <td>Early networks</td>
-          <td>Connect computers</td>
-          <td>Packets</td>
-        </tr>
-        <tr>
-          <td>Birth of the Web</td>
-          <td>Connect documents</td>
-          <td>Hyperlinks</td>
-        </tr>
-        <tr>
-          <td>Modern Web</td>
-          <td>Connect people and services</td>
-          <td>Platforms</td>
-        </tr>
-      </table>
-    </section>
-  </main>
-
-  <footer>
-    <p>Pariya Nouri — Sogol Kasaei — Asad Ur Rab Jaffry</p>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Pariya Nouri · Sogol Kasaei · Asad Ur Rab Jaffry</span>
+      <span class="footer-updated">Last updated: June 2026</span>
+    </div>
   </footer>
+
 </body>
 </html>
