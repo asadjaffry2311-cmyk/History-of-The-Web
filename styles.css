@@ -1808,6 +1808,11 @@ td a { font-weight: 600; }
   gap: 28px;
   margin-top: 10px;
   align-items: start;
+  min-width: 0;
+}
+
+.ww-two-col > * {
+  min-width: 0;   /* critical — prevents grid children from overflowing */
 }
 
 /* Client-server diagram */
@@ -1890,6 +1895,22 @@ td a { font-weight: 600; }
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 0;        /* prevents card from overflowing grid */
+  overflow: hidden;    /* clips any child that tries to overflow */
+}
+
+/* Code block inside lang cards — scrollable not overflowing */
+.ww-lang-card .ww-code-block {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 14px 16px;
+}
+
+.ww-lang-card .ww-code-block code {
+  white-space: pre;
+  font-size: 12px;
+  display: block;
+  min-width: max-content;
 }
 
 .ww-lang-badge {
