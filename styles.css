@@ -1228,10 +1228,10 @@ td a { font-weight: 600; }
   .hero-actions { flex-direction: column; }
   .page-header { padding: 40px 20px 36px; }
   .container, .page-wrap { padding: 0 16px 60px; }
-  .rp-overview { flex-direction: column; padding: 16px 18px; }
-  .rp-overview-item { min-width: unset; width: 100%; padding: 10px 0; border-bottom: 1px solid var(--c-border); }
-  .rp-overview-item:last-child { border-bottom: none; }
+  .rp-overview { grid-template-columns: 1fr; padding: 16px 18px; }
   .rp-overview-sep { display: none; }
+  .rp-overview-item { align-items: flex-start; text-align: left; padding: 12px 0; border-bottom: 1px solid var(--c-border); }
+  .rp-overview-item:last-child { border-bottom: none; }
 }
 
 
@@ -2088,27 +2088,25 @@ td a { font-weight: 600; }
 
 /* Project overview strip */
 .rp-overview {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr 1px 1fr;
   align-items: center;
-  flex-wrap: nowrap;   /* force single line on desktop */
-  gap: 0;
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: 22px 28px;
+  padding: 24px 16px;
   margin-top: 40px;
   margin-bottom: 40px;
-  overflow-x: auto;    /* scroll on tiny screens rather than wrap */
 }
 
 .rp-overview-item {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 120px;
-  padding: 6px 14px;
+  gap: 6px;
+  padding: 8px 20px;
+  text-align: center;
+  align-items: center;
 }
 
 .rp-overview-label {
@@ -2117,12 +2115,14 @@ td a { font-weight: 600; }
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--c-blue);
+  white-space: nowrap;
 }
 
 .rp-overview-value {
   font-size: 14px;
   font-weight: 500;
   color: var(--c-text);
+  text-align: center;
 }
 
 .rp-overview-value a {
@@ -2134,7 +2134,7 @@ td a { font-weight: 600; }
   width: 1px;
   height: 40px;
   background: var(--c-border);
-  flex-shrink: 0;
+  justify-self: center;
 }
 
 /* Report sections with number badge */
