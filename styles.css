@@ -2090,23 +2090,24 @@ td a { font-weight: 600; }
 .rp-overview {
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr 1px 1fr;
-  align-items: center;
+  align-items: start;
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: 24px 16px;
+  padding: 0;
   margin-top: 40px;
   margin-bottom: 40px;
+  overflow: hidden;
 }
 
 .rp-overview-item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 8px 20px;
-  text-align: center;
-  align-items: center;
+  gap: 8px;
+  padding: 24px 20px;
+  text-align: left;
+  align-items: flex-start;
 }
 
 .rp-overview-label {
@@ -2116,13 +2117,16 @@ td a { font-weight: 600; }
   letter-spacing: 1.5px;
   color: var(--c-blue);
   white-space: nowrap;
+  height: 16px;           /* fixed height so all labels sit on same line */
+  display: flex;
+  align-items: center;
 }
 
 .rp-overview-value {
   font-size: 14px;
   font-weight: 500;
   color: var(--c-text);
-  text-align: center;
+  line-height: 1.5;
 }
 
 .rp-overview-value a {
@@ -2132,9 +2136,8 @@ td a { font-weight: 600; }
 
 .rp-overview-sep {
   width: 1px;
-  height: 40px;
   background: var(--c-border);
-  justify-self: center;
+  align-self: stretch;    /* full height of the row */
 }
 
 /* Report sections with number badge */
