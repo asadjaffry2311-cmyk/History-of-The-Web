@@ -764,6 +764,11 @@ td a { font-weight: 600; }
   line-height: 1.6;
 }
 
+.dyk-text strong {
+  color: #c8ddf0;    /* same as surrounding text, not highlighted */
+  font-weight: 600;
+}
+
 .dyk-text a {
   color: #9ec8f0;
   font-weight: 600;
@@ -1203,10 +1208,15 @@ td a { font-weight: 600; }
   .dyk-label { align-self: flex-start; }
   .sidebar-right { align-self: start; }
   .side-figure { position: static !important; top: auto !important; }
-  .about-strip-inner { flex-direction: column; gap: 16px; }
-  .about-sep { width: 60px; height: 1px; }
+  .about-strip-inner { flex-direction: column; align-items: flex-start; gap: 0; }
+  .about-block { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .about-block:last-child { border-bottom: none; }
+  .about-sep { display: none; }  /* hide vertical separators on mobile, use border instead */
   .tp-event { display: none; }
   .footer-bottom { flex-direction: column; text-align: center; }
+  .stat-strip-inner { flex-direction: column; }
+  .stat-sep { width: 60px; height: 1px; margin: 0; }
+  .stat-item { padding: 16px 20px; }
 }
 
 @media (max-width: 600px) {
@@ -1214,6 +1224,14 @@ td a { font-weight: 600; }
   .tp-year { font-size: 13px; }
   .refs-header { flex-direction: column; align-items: flex-start; gap: 10px; }
   .callout-box { flex-direction: column; gap: 10px; }
+  .hero { padding: 50px 20px 60px; }
+  .hero-actions { flex-direction: column; }
+  .page-header { padding: 40px 20px 36px; }
+  .container, .page-wrap { padding: 0 16px 60px; }
+  .rp-overview { flex-direction: column; padding: 16px 18px; }
+  .rp-overview-item { min-width: unset; width: 100%; padding: 10px 0; border-bottom: 1px solid var(--c-border); }
+  .rp-overview-item:last-child { border-bottom: none; }
+  .rp-overview-sep { display: none; }
 }
 
 
@@ -2072,15 +2090,16 @@ td a { font-weight: 600; }
 .rp-overview {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;   /* force single line on desktop */
   gap: 0;
   background: var(--c-surface);
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: 28px 32px;
+  padding: 22px 28px;
   margin-top: 40px;
   margin-bottom: 40px;
+  overflow-x: auto;    /* scroll on tiny screens rather than wrap */
 }
 
 .rp-overview-item {
@@ -2088,8 +2107,8 @@ td a { font-weight: 600; }
   flex-direction: column;
   gap: 4px;
   flex: 1;
-  min-width: 140px;
-  padding: 8px 16px;
+  min-width: 120px;
+  padding: 6px 14px;
 }
 
 .rp-overview-label {
