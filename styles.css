@@ -1138,20 +1138,20 @@ td a { font-weight: 600; }
 .about-strip-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  display: flex;
-  align-items: flex-start;  /* top-align so labels all sit on same line */
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+  align-items: start;
 }
 
 .about-block {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 160px;
+  gap: 6px;
+  padding: 4px 24px;
 }
+
+.about-block:first-child { padding-left: 0; }
+.about-block:last-child  { padding-right: 0; }
 
 .about-label {
   font-size: 10px;
@@ -1159,9 +1159,15 @@ td a { font-weight: 600; }
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--c-gold);
-  height: 16px;           /* fixed height so all labels sit on same baseline */
+  height: 16px;
   display: flex;
   align-items: center;
+}
+
+.about-sep {
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+  align-self: stretch;
 }
 
 .about-value {
@@ -1176,28 +1182,6 @@ td a { font-weight: 600; }
   text-underline-offset: 2px;
 }
 .about-value a:hover { color: #ffffff; }
-
-.topbar a {
-  color: #c0d4e8;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.topbar a:hover { color: #ffffff; }
-
-.footer-brand p a {
-  color: #9ec8f0;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-.footer-brand p a:hover { color: #ffffff; }
-
-.about-sep {
-  width: 1px;
-  height: 40px;
-  background: rgba(255,255,255,0.1);
-  flex-shrink: 0;
-  margin-top: 4px;   /* nudge down to visually centre between label and value */
-}
 
 /* ---------- Footer bottom row upgrade ---------- */
 .footer-bottom {
@@ -1225,8 +1209,9 @@ td a { font-weight: 600; }
   .stat-item { padding: 16px 20px; }
   .tp-event { font-size: 11px; }
   /* About strip */
-  .about-strip-inner { flex-direction: column; align-items: flex-start; gap: 0; }
+  .about-strip-inner { grid-template-columns: 1fr; }
   .about-block { width: 100%; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .about-block:first-child, .about-block:last-child { padding-left: 0; padding-right: 0; }
   .about-block:last-child { border-bottom: none; }
   .about-sep { display: none; }
   /* Footer */
