@@ -1139,7 +1139,7 @@ td a { font-weight: 600; }
   max-width: var(--max-w);
   margin: 0 auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;  /* top-align so labels all sit on same line */
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
@@ -1159,6 +1159,9 @@ td a { font-weight: 600; }
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--c-gold);
+  height: 16px;           /* fixed height so all labels sit on same baseline */
+  display: flex;
+  align-items: center;
 }
 
 .about-value {
@@ -1193,6 +1196,7 @@ td a { font-weight: 600; }
   height: 40px;
   background: rgba(255,255,255,0.1);
   flex-shrink: 0;
+  margin-top: 4px;   /* nudge down to visually centre between label and value */
 }
 
 /* ---------- Footer bottom row upgrade ---------- */
